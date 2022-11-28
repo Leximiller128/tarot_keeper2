@@ -1,2 +1,2 @@
-//import footer.css
+//import pastreadings.css
 import "../styles/pastreading.css"
