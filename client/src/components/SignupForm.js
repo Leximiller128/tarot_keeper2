@@ -1,5 +1,5 @@
 //import signupform.css
-import "../styles/signupForm.css"
+import "../styles/signupform.css"
 
 import React, { useState } from "react";
 import "./style.css";

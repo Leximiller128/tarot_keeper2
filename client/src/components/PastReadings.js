@@ -1,2 +1,2 @@
 //import pastreadings.css
-import "../styles/pastreading.css"
+import "../styles/pastreadings.css"
