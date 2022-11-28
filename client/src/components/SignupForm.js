@@ -1,3 +1,6 @@
+//import footer.css
+import "../styles/signupForm.css"
+
 import React, { useState } from "react";
 import "./style.css";
 

@@ -1,3 +1,6 @@
+//import loginform.css
+import "../styles/loginForm.css"
+
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
