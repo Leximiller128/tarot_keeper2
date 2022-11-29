@@ -37,29 +37,28 @@ const resolvers = {
 
       return { token, user };
     },
-// need to add 'save card', 'remove card',
-// saveBook: async (parent, { newBook }, context) => {
-//   if (context.user) {
-//     const updatedUser = await User.findByIdAndUpdate(
-//       { _id: context.user._id },
-//       { $push: { savedBooks: newBook } },
-//       { new: true }
-//     );
-//     return updatedUser;
-//   }
-//   throw new AuthenticationError("You need to be logged in!");
-// },
-// removeBook: async (parent, { bookID }, context) => {
-//   if (context.User) {
-//     const updatedUser = await User.findByIdAndUpdate(
-//       { _id: context.user._id },
-//       { $pull: { savedBooks: { bookId } } },
-//       { new: true }
-//     );
-//     return updatedUser;
-//   }
-//   throw new AuthenticationError("You need to be logged in!");
-// },
+    saveCard: async (parent, { newCard }, context) => {
+      if (context.user) {
+        const updatedUser = await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $push: { savedCards: newCard } },
+          { new: true }
+        );
+        return updatedUser;
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+    removeCard: async (parent, { cardId }, context) => {
+      if (context.User) {
+        const updatedUser = await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $pull: { savedCards: { cardId } } },
+          { new: true }
+        );
+        return updatedUser;
+      }
+      throw new AuthenticationError("You need to be logged in!");
+},
   },
 };
 
