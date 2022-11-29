@@ -2,6 +2,7 @@ const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
 //might have to import tarot schema? Will there be tarot schema?
+const cardSchema = require('./TarotCard');
 const userSchema = new Schema(
   {
     username: {
@@ -19,10 +20,10 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    //  We will use this if there is a tarot schema 
-    // savedBooks: [bookSchema],
+
+    tarotCard: [cardSchema],
   },
-  // set this to use virtual below
+
   {
     toJSON: {
       virtuals: true,
