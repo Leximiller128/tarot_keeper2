@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=Edu+VIC+WA+NT+Beginner&family=Lora:ital@1&family=Open+Sans&family=Reenie+Beanie&display=swap');
+
 :root {
   --black: #473529;
   --white: #E6DDC3;
@@ -10,10 +12,8 @@
   --footer-height-mobile: 10vh;
 }
 
-body {
-  font-family:  rel="preconnect" href="https://fonts.googleapis.com"
-  link rel="preconnect" href="https://fonts.gstatic.com" crossorigin
-  link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=Edu+VIC+WA+NT+Beginner&family=Lora:ital@1&family=Open+Sans&family=Reenie+Beanie&display=swap" rel="stylesheet"
+body { 
+  font-family: 'lora', Cairo;
 }
 
 /* others below */
