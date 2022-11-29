@@ -9,6 +9,8 @@ import Navigation from "./components/Navigation";
 import NewReadings from "./components/NewReading";
 import PastReadings from "./components/PastReadings";
 import SignupForm from "./components/SignupForm";
+import TextArea from "./components/TextArea"
+import SearchForm from "./components/SearchForm"
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
       <PastReadings />
       <SignupForm />
       <Footer />
+      <TextArea/>
+      <SearchForm/>
     </div>
   );
 }
