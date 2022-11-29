@@ -1,4 +1,5 @@
-import "./App.css";
+// //do we need app.css?
+// import "./App.css";
 //import components
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -8,16 +9,16 @@ import Navigation from "./components/Navigation";
 import NewReadings from "./components/NewReading";
 import PastReadings from "./components/PastReadings";
 import SignupForm from "./components/SignupForm";
+//import react, usestate
+import React, { useState } from "react";
 
-// import BucketList from "./components/BucketList";
-// // Need to edit bucketlist
 
-// function App() {
-//   return (
-//     <div className="bucket-app">
-//       <BucketList />
-//     </div>
-//   );
-// }
+function App() {
+  return (
+    <div className="bucket-app">
+      <BucketList />
+    </div>
+  );
+}
 
-// export default App;
+export default App;
