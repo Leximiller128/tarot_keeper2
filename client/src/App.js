@@ -12,33 +12,19 @@ import SignupForm from "./components/SignupForm";
 //import react, usestate
 import React, { useState } from "react";
 
-// function App() {
-//   const [currentPage, setCurrentPage] = useState("About");
-
-//   const renderPage = () => {
-//     if (currentPage === "Library") {
-//       return <Library />;
-//     }
-//     if (currentPage === "NewReadings") {
-//       return <NewReadings />;
-//     }
-//     if (currentPage === "PastReadings") {
-//       return <PastReadings />;
-//     }
-//     return <Contact />;
-//   };
-
-//   const handlePageChange = (page) => setCurrentPage(page);
-
-//   return (
-//     <div>
-//       <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-
-//       {renderPage()}
-
-//       <Footer />
-//     </div>
-//   );
-// }
+function App() {
+  return (
+    <div>
+      <Navigation />
+      <Header />
+      <Library />
+      <LoginForm />
+      <NewReadings />
+      <PastReadings />
+      <SignupForm />
+      <Footer />
+    </div>
+  );
+}
 
 export default App;
