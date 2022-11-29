@@ -23,8 +23,8 @@ function App() {
       <PastReadings />
       <SignupForm />
       <Footer />
-      <TextArea/>
-      <SearchForm/>
+      <TextArea />
+      <SearchForm />
     </div>
   );
 }
