@@ -9,8 +9,6 @@ import Navigation from "./components/Navigation";
 import NewReadings from "./components/NewReading";
 import PastReadings from "./components/PastReadings";
 import SignupForm from "./components/SignupForm";
-//import react, usestate
-import React, { useState } from "react";
 
 function App() {
   return (
