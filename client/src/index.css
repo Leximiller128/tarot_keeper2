@@ -1,15 +1,19 @@
 :root {
-  --black: ;
-  --white: ;
-  --accent-color: ;
-  --background-color: ;
+  --black: #473529;
+  --white: #E6DDC3;
+  --accent-color: #FF4326;
+  --background-color: #88B8A1;
+  --color: #FFBD01;
+
   --header-height: 12vh;
   --photo-height: 21vh;
   --footer-height-mobile: 10vh;
 }
 
 body {
-  font-family:  
+  font-family:  rel="preconnect" href="https://fonts.googleapis.com"
+  link rel="preconnect" href="https://fonts.gstatic.com" crossorigin
+  link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=Edu+VIC+WA+NT+Beginner&family=Lora:ital@1&family=Open+Sans&family=Reenie+Beanie&display=swap" rel="stylesheet"
 }
 
 /* others below */
