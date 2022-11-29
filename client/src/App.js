@@ -9,27 +9,29 @@ import Header from "./components/Header";
 import Library from "./components/Library";
 import LoginForm from "./components/LoginForm";
 import Navigation from "./components/Navigation";
-import NewReadings from "./components/NewReading";
+import NewReading from "./components/NewReading";
 import PastReadings from "./components/PastReadings";
 import SignupForm from "./components/SignupForm";
 import TextArea from "./components/TextArea";
 import SearchForm from "./components/SearchForm";
 
-function App() {
+//check routes and why here
+const App = () => {
   return (
     <div>
-      <Navigation />
-      <Header />
-      <Library />
-      <LoginForm />
-      <NewReadings />
-      <PastReadings />
-      <SignupForm />
-      <Footer />
-      <TextArea />
-      <SearchForm />
+      <Routes>
+        <Route path="/NewReading" element={<NewReading />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/create" element={<CreateUser />} />
+        <Route path="/odds" element={<Odds />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/ranking" element={<Ranking />}></Route>
+        <Route path="/history" element={<History />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/admin" element={<Admin />}></Route>
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
