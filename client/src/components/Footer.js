@@ -36,7 +36,7 @@ export default function App() {
             floating
             size="lg"
             className="text-dark m-1"
-            href="#!"
+            href="#!https://www.facebook.com/tarotcard/"
             role="button"
           >
             <MDBIcon fab className="fa-twitter" />
@@ -48,7 +48,7 @@ export default function App() {
             floating
             size="lg"
             className="text-dark m-1"
-            href="#!"
+            href="#!https://twitter.com/search?q=%23tarot"
             role="button"
           >
             <MDBIcon fab className="fa-google" />
@@ -60,7 +60,7 @@ export default function App() {
             floating
             size="lg"
             className="text-dark m-1"
-            href="#!"
+            href="#!https://www.google.com/search?q=tarot+card"
             role="button"
           >
             <MDBIcon fab className="fa-instagram" />
@@ -72,7 +72,7 @@ export default function App() {
             floating
             size="lg"
             className="text-dark m-1"
-            href="#!"
+            href="#!https://www.instagram.com/explore/tags/tarotcards/?hl=en"
             role="button"
           >
             <MDBIcon fab className="fa-linkedin" />
@@ -96,10 +96,8 @@ export default function App() {
         className="text-center text-dark p-3"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
       >
-        © 2022 Copyright:
-        <a className="text-dark" href="https://mdbootstrap.com/">
-          MDBootstrap.com
-        </a>
+        © 2022 Copyright
+        <a className="text-dark" href="https://mdbootstrap.com/"></a>
       </div>
     </MDBFooter>
   );
