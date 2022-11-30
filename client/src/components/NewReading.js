@@ -1,7 +1,7 @@
 //import newreadings.css
-import "../styles/newreading.css";
-import Header from "./Header";
-import Footer from "./Footer";
+// import "../styles/newreading.css";
+// import Header from "./Header";
+// import Footer from "./Footer";
 
 export default function NewReading() {
   return (
