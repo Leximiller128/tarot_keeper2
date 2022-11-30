@@ -34,24 +34,24 @@ export default function Navbar() {
         </MDBNavbarToggler>
         <MDBCollapse navbar show={showNavText}>
           <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
-            <Link to="/Aboutme">
+            <Link to="/NewReading">
               <MDBNavbarItem>
                 {/* <MDBNavbarLink active aria-current="page"> */}
-                About Me
+                New Reading
                 {/* </MDBNavbarLink> */}
               </MDBNavbarItem>
             </Link>
-            <Link to="/Contact">
+            <Link to="/Library">
               <MDBNavbarItem>
                 {/* <MDBNavbarLink> */}
-                Contact
+                Library
                 {/* </MDBNavbarLink> */}
               </MDBNavbarItem>
             </Link>
-            <Link to="/Projects">
+            <Link to="/PastReadings">
               <MDBNavbarItem>
                 {/* <MDBNavbarLink> */}
-                Projects
+                Past Readings
                 {/* </MDBNavbarLink> */}
               </MDBNavbarItem>
             </Link>
