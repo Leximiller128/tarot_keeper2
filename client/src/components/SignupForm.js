@@ -8,7 +8,7 @@ import React, { useState } from "react";
 //changed ../..utils/helpers to ../utils/helpers
 import { checkPassword, validateEmail } from "../utils/helpers";
 
-function Form() {
+function SignupForm() {
   // Create state variables for the fields in the form
   // We are also setting their initial values to an empty string
   const [email, setEmail] = useState("");
@@ -100,4 +100,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default SignupForm;

@@ -13,7 +13,7 @@ import {
   MDBCollapse,
 } from "mdb-react-ui-kit";
 
-export default function App() {
+export default function Header() {
   const [showBasic, setShowBasic] = useState(false);
 
   return (

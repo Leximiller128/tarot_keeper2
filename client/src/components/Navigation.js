@@ -1,6 +1,6 @@
 //import navigation.css
 import "../styles/navigation.css"
 
-export default function name(params) {
+export default function Navigation(params) {
     
 }
