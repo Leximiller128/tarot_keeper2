@@ -1,7 +1,10 @@
 // //do we need app.css?
 // import "./App.css";
 //routes, route
+import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import "mdb-react-ui-kit/dist/css/mdb.min.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 //import components
 import Footer from "./components/Footer";
