@@ -1,5 +1,5 @@
 {
-  "name": "googlebooks-app",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
@@ -16,12 +16,6 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "@apollo/client": "^3.7.1",
-    "@apollo/server": "^4.1.1",
     "apollo-server-express": "^3.11.1",
-    "bootstrap": "^3.4.1",
-    "express": "^4.18.2",
-    "graphql": "^16.6.0",
-    "react-bootstrap": "^2.6.0"
   }
 }
