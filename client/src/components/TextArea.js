@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { MDBTextArea, MDBInput } from "mdb-react-ui-kit";
 
 export default function TextArea() {
