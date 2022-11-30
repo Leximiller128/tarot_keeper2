@@ -1,6 +1,6 @@
 //import newreadings.css
 import "../styles/newreading.css"
 
-export default function name(params) {
+export default function NewReadings(params) {
     
 }
