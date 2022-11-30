@@ -3,7 +3,7 @@
 // import Header from "./Header";
 // import Footer from "./Footer";
 
-export default function NewReading() {
+function NewReading() {
   return (
     <>
       <Header />
@@ -12,3 +12,5 @@ export default function NewReading() {
     </>
   );
 }
+
+export default NewReading;

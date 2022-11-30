@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { MDBTextArea, MDBInput } from "mdb-react-ui-kit";
 
-export default function TextArea() {
+function TextArea() {
   return (
     <BrowserRouter>
       <div>
@@ -13,3 +13,5 @@ export default function TextArea() {
     </BrowserRouter>
   );
 }
+
+export default TextArea;
