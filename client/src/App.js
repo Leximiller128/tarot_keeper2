@@ -5,10 +5,11 @@ import "mdb-react-ui-kit";
 
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Home from "./components/Home";
 // import Library from "./components/Library";
 // import LoginForm from "./components/LoginForm";
 // import Navigation from "./components/Navigation";
-import NewReading from "./components/NewReading";
+// import NewReading from "./components/NewReading";
 // import PastReadings from "./components/PastReadings";
 // import SignupForm from "./components/SignupForm";
 // import TextArea from "./components/TextArea";
@@ -20,10 +21,10 @@ const App = () => {
     <BrowserRouter>
       <div>
         <Routes>
-          <Route path="/" element={<NewReading />}></Route>
-          <Route path="/Header" element={<Header />}></Route>
-          <Route path="/NewReading" element={<NewReading />}></Route>
-          <Route path="/Footer" element={<Footer />}></Route>
+          <Route path="/" element={<Home />}></Route>
+          {/* <Route path="/Header" element={<Header />}></Route> */}
+          {/* <Route path="/NewReading" element={<NewReading />}></Route> */}
+          {/* <Route path="/Footer" element={<Footer />}></Route> */}
           {/* <Route path="/" element={<NewReading />}></Route>
           <Route path="/NewReading" element={<NewReading />}></Route>
           <Route path="/SignupForm" element={<SignupForm />}></Route>

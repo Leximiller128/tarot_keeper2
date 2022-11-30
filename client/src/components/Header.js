@@ -12,14 +12,14 @@ import {
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
-  const [showNavText, setShowNavText] = useState(false);
+  // const [showNavText, setShowNavText] = useState(false);
 
   return (
     <MDBNavbar expand="lg" light bgColor="light">
       <MDBContainer fluid>
-        <Link to="/Aboutme">
+        <Link to="/NewReading">
           {/* <MDBNavbarBrand> */}
-          Lexi Miller
+          Home
           {/* </MDBNavbarBrand> */}
         </Link>
         <MDBNavbarToggler
@@ -28,11 +28,11 @@ export default function Navbar() {
           aria-controls="navbarText"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          onClick={() => setShowNavText(!showNavText)}
+          // onClick={() => setShowNavText(!showNavText)}
         >
           <MDBIcon icon="bars" fas />
         </MDBNavbarToggler>
-        <MDBCollapse navbar show={showNavText}>
+        <MDBCollapse>
           <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
             <Link to="/NewReading">
               <MDBNavbarItem>
