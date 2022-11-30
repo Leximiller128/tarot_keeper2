@@ -10,7 +10,7 @@ import {
 } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+function Navbar() {
   const [showNavText, setShowNavText] = useState(false);
 
   return (
@@ -60,3 +60,5 @@ export default function Navbar() {
     </MDBNavbar>
   );
 }
+
+export default Navbar;

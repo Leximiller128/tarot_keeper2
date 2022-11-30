@@ -2,7 +2,7 @@
 import React from "react";
 import { MDBFooter, MDBContainer, MDBIcon, MDBBtn } from "mdb-react-ui-kit";
 
-export default function Footer() {
+function Footer() {
   return (
     <MDBFooter
       className="text-center text-white"
@@ -94,3 +94,5 @@ export default function Footer() {
     </MDBFooter>
   );
 }
+
+export default Footer;
