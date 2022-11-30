@@ -6,7 +6,7 @@ import React, { useState } from "react";
 
 // Here we import a helper function that will check if the email is valid
 //changed ../..utils/helpers to ../utils/helpers
-import { checkPassword, validateEmail } from "../utils/helpers";
+import { checkPassword, validateEmail } from "../../utils/helpers";
 
 function SignupForm() {
   // Create state variables for the fields in the form
