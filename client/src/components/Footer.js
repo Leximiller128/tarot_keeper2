@@ -1,13 +1,6 @@
 //import footer.css
 import React from "react";
-import {
-  MDBFooter,
-  MDBContainer,
-  MDBCol,
-  MDBRow,
-  MDBIcon,
-  MDBBtn,
-} from "mdb-react-ui-kit";
+import { MDBFooter, MDBContainer, MDBIcon, MDBBtn } from "mdb-react-ui-kit";
 
 export default function Footer() {
   return (
@@ -35,7 +28,7 @@ export default function Footer() {
             floating
             size="lg"
             className="text-dark m-1"
-            href="#!https://www.facebook.com/tarotcard/"
+            href="https://www.facebook.com/tarotcard/"
             role="button"
           >
             <MDBIcon fab className="fa-twitter" />

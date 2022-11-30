@@ -3,8 +3,9 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "mdb-react-ui-kit";
 
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Home from "./components/Home";
 // import Library from "./components/Library";
 // import LoginForm from "./components/LoginForm";
 // import Navigation from "./components/Navigation";
@@ -20,7 +21,10 @@ const App = () => {
     <BrowserRouter>
       <div>
         <Routes>
-          <Route path="/Header" element={<Header />}></Route>
+          <Route path="/" element={<Home />}></Route>
+          {/* <Route path="/Header" element={<Header />}></Route> */}
+          {/* <Route path="/NewReading" element={<NewReading />}></Route> */}
+          {/* <Route path="/Footer" element={<Footer />}></Route> */}
           {/* <Route path="/" element={<NewReading />}></Route>
           <Route path="/NewReading" element={<NewReading />}></Route>
           <Route path="/SignupForm" element={<SignupForm />}></Route>
