@@ -3,11 +3,9 @@ import React, { useState } from "react";
 import {
   MDBNavbar,
   MDBContainer,
-  MDBNavbarBrand,
   MDBIcon,
   MDBNavbarNav,
   MDBNavbarItem,
-  MDBNavbarLink,
   MDBNavbarToggler,
   MDBCollapse,
 } from "mdb-react-ui-kit";
