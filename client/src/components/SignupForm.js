@@ -2,10 +2,11 @@
 import "../styles/signupform.css"
 
 import React, { useState } from "react";
-import "./style.css";
+// import "./style.css";
 
 // Here we import a helper function that will check if the email is valid
-import { checkPassword, validateEmail } from "../../utils/helpers";
+//changed ../..utils/helpers to ../utils/helpers
+import { checkPassword, validateEmail } from "../utils/helpers";
 
 function Form() {
   // Create state variables for the fields in the form
