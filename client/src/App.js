@@ -2,7 +2,7 @@ import "./App.css";
 // import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
-import Page from "./components/page";
+import Page from "./components/Page";
 import React, { useState } from "react";
 import Nav from "./components/Nav/nav";
 
