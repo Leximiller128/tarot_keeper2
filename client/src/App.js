@@ -20,11 +20,11 @@ const App = () => {
     <BrowserRouter>
       <div>
         <Routes>
-          <Route path="/" element={<NewReading />} />
-          <Route path="/newreading" element={<NewReading />} />
-          <Route path="/signupForm" element={<SignupForm />} />
-          <Route path="/footer" element={<Footer />} />
-          <Route path="/header" element={<Header />} />
+          <Route path="/" element={<NewReading />}></Route>
+          <Route path="/newreading" element={<NewReading />}></Route>
+          <Route path="/signupForm" element={<SignupForm />}></Route>
+          <Route path="/footer" element={<Footer />}></Route>
+          <Route path="/header" element={<Header />}></Route>
           <Route path="/library" element={<Library />}></Route>
           <Route path="/loginform" element={<LoginForm />}></Route>
           <Route path="/navigation" element={<Navigation />}></Route>
