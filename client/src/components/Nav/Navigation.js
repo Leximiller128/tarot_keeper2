@@ -1,5 +1,5 @@
 //import css
-import "./navigation.css"
+import "./navigation.css";
 
 import React, { useState } from "react";
 import {
@@ -19,11 +19,11 @@ export default function Navbar() {
   return (
     <MDBNavbar expand="lg" light bgColor="light">
       <MDBContainer fluid>
-      <Link to="/">
+        <Link to="/">
           {/* <MDBNavbarBrand> */}
           Home
           {/* </MDBNavbarBrand> */}
-          </Link>
+        </Link>
         <MDBNavbarToggler
           type="button"
           data-target="#navbarText"
