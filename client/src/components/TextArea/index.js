@@ -1,5 +1,4 @@
-//import css
-import "./textarea.css"
+import "./textarea.css";
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { MDBTextArea, MDBInput } from "mdb-react-ui-kit";
