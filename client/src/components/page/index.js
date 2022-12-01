@@ -1,3 +1,5 @@
+//import page.css
+import "./page.css"
 import Nav from "../Nav"
 import PageContent from "../PageContent";
 // import Footer from "./components/Footer";

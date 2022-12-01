@@ -1,3 +1,6 @@
+//import css
+import "./navigation.css"
+
 import React, { useState } from "react";
 import {
   MDBNavbar,

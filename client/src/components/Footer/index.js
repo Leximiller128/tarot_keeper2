@@ -1,4 +1,5 @@
 //import footer.css
+import "./footer.css"
 import React from "react";
 import { MDBFooter, MDBContainer, MDBIcon, MDBBtn } from "mdb-react-ui-kit";
 

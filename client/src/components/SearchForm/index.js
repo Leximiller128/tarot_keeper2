@@ -1,3 +1,5 @@
+//import css
+import "./searchform.css"
 import React from "react";
 
 function SearchForm(props) {
