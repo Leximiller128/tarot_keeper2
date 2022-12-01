@@ -10,6 +10,9 @@ import {
   MDBNavbarItem,
   MDBNavbarToggler,
   MDBCollapse,
+  // last 2 are causing errors with validateDOMNesting, can be commaed out
+  MDBNavbarLink,
+  MDBNavbarBrand,
 } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
 
@@ -20,9 +23,7 @@ export default function Navbar() {
     <MDBNavbar expand="lg" light bgColor="light">
       <MDBContainer fluid>
         <Link to="/">
-          {/* <MDBNavbarBrand> */}
-          Home
-          {/* </MDBNavbarBrand> */}
+          <MDBNavbarBrand>Tarot Keeper</MDBNavbarBrand>
         </Link>
         <MDBNavbarToggler
           type="button"
@@ -38,30 +39,26 @@ export default function Navbar() {
           <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
             <Link to="/NewReading">
               <MDBNavbarItem>
-                {/* <MDBNavbarLink active aria-current="page"> */}
-                New Reading
-                {/* </MDBNavbarLink> */}
+                <MDBNavbarLink active aria-current="page">
+                  New Reading
+                </MDBNavbarLink>
               </MDBNavbarItem>
             </Link>
             <Link to="/PastReadings">
               <MDBNavbarItem>
-                {/* <MDBNavbarLink active aria-current="page"> */}
-                Past Readings
-                {/* </MDBNavbarLink> */}
+                <MDBNavbarLink active aria-current="page">
+                  Past Readings
+                </MDBNavbarLink>
               </MDBNavbarItem>
             </Link>
             <Link to="/Library">
               <MDBNavbarItem>
-                {/* <MDBNavbarLink> */}
-                Search Library
-                {/* </MDBNavbarLink> */}
+                <MDBNavbarLink>Search Library</MDBNavbarLink>
               </MDBNavbarItem>
             </Link>
             <Link to="/FriendReadings">
               <MDBNavbarItem>
-                {/* <MDBNavbarLink> */}
-                Friends' Readings
-                {/* </MDBNavbarLink> */}
+                <MDBNavbarLink>Friends' Readings</MDBNavbarLink>
               </MDBNavbarItem>
             </Link>
           </MDBNavbarNav>
