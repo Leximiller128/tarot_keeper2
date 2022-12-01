@@ -1,16 +1,15 @@
-//import newreadings.css
-// import "../styles/newreading.css";
-// import Header from "./Header";
+import React from "react";
+
+// import newreadings.css
+// import "./NewReading/newreading.css";
 // import Footer from "./Footer";
 
-function NewReading() {
+export default function NewReading() {
   return (
     <>
-      <Header />
-      <h1>Hello</h1>
-      <Footer />
+          {/* <Header /> */}
+          <h1>Hello</h1>
     </>
   );
 }
 
-export default NewReading;

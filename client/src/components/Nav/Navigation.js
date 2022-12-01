@@ -10,17 +10,17 @@ import {
 } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+export default function Navbar() {
   const [showNavText, setShowNavText] = useState(false);
 
   return (
     <MDBNavbar expand="lg" light bgColor="light">
       <MDBContainer fluid>
-        <Link to="/NewReading">
+      <Link to="/">
           {/* <MDBNavbarBrand> */}
           Home
           {/* </MDBNavbarBrand> */}
-        </Link>
+          </Link>
         <MDBNavbarToggler
           type="button"
           data-target="#navbarText"
@@ -33,6 +33,13 @@ function Navbar() {
         </MDBNavbarToggler>
         <MDBCollapse navbar show={showNavText}>
           <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
+            <Link to="/NewReading">
+              <MDBNavbarItem>
+                {/* <MDBNavbarLink active aria-current="page"> */}
+                New Reading
+                {/* </MDBNavbarLink> */}
+              </MDBNavbarItem>
+            </Link>
             <Link to="/PastReadings">
               <MDBNavbarItem>
                 {/* <MDBNavbarLink active aria-current="page"> */}
@@ -50,7 +57,7 @@ function Navbar() {
             <Link to="/FriendReadings">
               <MDBNavbarItem>
                 {/* <MDBNavbarLink> */}
-                Projects
+                Friends' Readings
                 {/* </MDBNavbarLink> */}
               </MDBNavbarItem>
             </Link>
@@ -60,5 +67,3 @@ function Navbar() {
     </MDBNavbar>
   );
 }
-
-export default Navbar;
