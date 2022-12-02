@@ -1,0 +1,14 @@
+.mb-3 {
+    padding: 10px;
+    justify-content: center;
+    margin: 30px;
+    width: flex;
+}
+
+.btn2 {
+    background-color: #FFBD01;
+    border-color: #FFBD01;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
