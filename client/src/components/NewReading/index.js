@@ -18,7 +18,11 @@ export default function NewReading() {
   return (
     <>
       {/* Tarot card placement */}
-      <MDBCard className="card-element" style={{ maxWidth: "15rem" }} aria-hidden="true">
+      <MDBCard
+        className="card-element"
+        style={{ maxWidth: "25rem" }}
+        aria-hidden="true"
+      >
         <MDBCardImage
           src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp"
           position="top"
@@ -35,18 +39,13 @@ export default function NewReading() {
             <span className="placeholder col-6"></span>
             <span className="placeholder col-8"></span>
           </MDBCardText>
-          <MDBBtn
-            href="#"
-            tabIndex={-1}
-            disabled
-            className="placeholder col-6"
-          ></MDBBtn>
+          <MDBBtn id="search-btn">Add Card</MDBBtn>
         </MDBCardBody>
       </MDBCard>
 
       {/* Text area and search bar */}
       <MDBContainer className="text-area">
-        <MDBContainer fluid>
+        <MDBContainer>
           <MDBInputGroup tag="form" className="d-flex w-auto mb-3">
             <input
               className="form-control"
@@ -59,7 +58,7 @@ export default function NewReading() {
         </MDBContainer>
         <MDBInput label="Title for New Reading" id="typeText" type="text" />
         <MDBInput label="Initial Question Asked" id="typeText" type="text" />
-        <MDBTextArea label="Notes" id="textAreaExample" rows={4} />
+        <MDBTextArea label="Notes" id="typeText" rows={4} />
         <MDBBtn className="submit-btn">Submit</MDBBtn>
       </MDBContainer>
     </>

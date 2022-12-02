@@ -32,3 +32,21 @@
 .submit-btn:hover {
   background-color: #88b8a1;
 }
+
+@media (max-width: 1325px) {
+ .submit-btn{
+
+ }
+ #typeText{
+  display: flex;
+  order: 2;
+ }
+ .card-element{
+  display: flex;
+  order: 2;
+ }
+ #search-btn{
+  display: flex;
+  order: 2;
+ }
+}

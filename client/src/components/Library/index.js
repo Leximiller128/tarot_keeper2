@@ -25,9 +25,7 @@ export default function Library() {
             aria-label="Search"
             type="Search"
           />
-          <MDBBtn className="searchBtn">
-            Search
-          </MDBBtn>
+          <MDBBtn className="searchBtn">Search</MDBBtn>
         </MDBInputGroup>
       </MDBContainer>
 
