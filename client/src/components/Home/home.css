@@ -4,9 +4,12 @@
   margin-right: 10%;
 }
 
-#search-btn { 
-  background-color: #FFBD01;
+#search-btn {
+  background-color: #ffbd01;
+}
 
+#search-btn:hover {
+  background-color: #88B8A1;
 }
 
 .card-element {
@@ -22,4 +25,8 @@
 .submit-btn {
   margin: 15px;
   left: 40%;
+}
+
+.submit-btn:hover {
+  background-color: #88B8A1;
 }
