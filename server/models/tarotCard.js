@@ -4,27 +4,38 @@ const { Schema } = require('mongoose');
 const cardSchema = new Schema({
   name: {
     type: String,
-    required: true,
+    required: true
   },
-  description: {
+  arcana: {
+    type: String
+  },
+  suit: {
     type: String,
-    required: true,
+    required: true
   },
-  // saved book id from GoogleBooks.... card ID from API?
-  cardId: {
+  img: {
+    type: String
+  },
+  fortune_telling: {
     type: String,
-    required: true,
+    required: true
   },
-  image: {
+  keywords: {
+    type: String
+  },
+  meaning_up: {
     type: String,
+    required: true
   },
-  // link: {
-  //   type: String,
-  // },  maybe don't need this?
-  title: {
+  meaning_rev: {
     type: String,
-    required: true,
+    required: true
   },
+  desc:{
+    type: String,
+    required: true
+  },
+
 });
 
 module.exports = cardSchema;
