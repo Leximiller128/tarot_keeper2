@@ -9,5 +9,5 @@ const readingsSchema = new Schema ({
 });
 
 
-module.exports = cardSchema;
-module.exports = userSchema;
+
+module.exports = readingsSchema;
