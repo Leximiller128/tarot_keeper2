@@ -8,6 +8,4 @@ const readingsSchema = new Schema ({
   tarotCard: [cardSchema],
 });
 
-
-
 module.exports = readingsSchema;
