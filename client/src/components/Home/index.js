@@ -57,10 +57,10 @@ function Home() {
             <MDBBtn outline>Search</MDBBtn>
           </MDBInputGroup>
         </MDBContainer>
-        <MDBInput label="Title for New Reading" id="typeText" type="text" />
+        <MDBInput className="new-title" label="Title for New Reading" id="typeText" type="text" />
         <MDBInput label="Inital Question Asked" id="typeText" type="text" />
         <MDBTextArea label="Notes" id="textAreaExample" rows={4} />
-        <MDBBtn>Submit</MDBBtn>
+        <MDBBtn className="search-btn">Submit</MDBBtn>
       </MDBContainer>
     </>
   );
