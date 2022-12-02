@@ -7,13 +7,18 @@ import {
   MDBNavbar,
   MDBBtn,
   MDBInputGroup,
+  MDBCardText,
+  MDBCardTitle,
+  MDBCardBody,
+  MDBCardImage,
+  MDBCard,
 } from "mdb-react-ui-kit";
 
 export default function Library() {
   return (
-    <MDBNavbar light bgColor="light">
+    <div>
       <MDBContainer fluid>
-        <MDBInputGroup tag="form" className="d-flex w-auto mb-3">
+        <MDBInputGroup tag="form" className="d-flex-w-auto-mb-3">
           <input
             className="form-control"
             placeholder="Type query"
@@ -23,10 +28,36 @@ export default function Library() {
           <MDBBtn outline>Search</MDBBtn>
         </MDBInputGroup>
       </MDBContainer>
-    </MDBNavbar>
+
+      <MDBCard
+        className="card-element"
+        style={{ maxWidth: "30rem" }}
+        aria-hidden="true"
+      >
+        <MDBCardImage
+          src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp"
+          position="top"
+          alt="Sunset Over the Sea"
+        />
+        <MDBCardBody>
+          <MDBCardTitle className="placeholder-glow">
+            <span className="placeholder col-6"></span>
+          </MDBCardTitle>
+          <MDBCardText className="placeholder-glow">
+            <span className="placeholder col-7"></span>
+            <span className="placeholder col-4"></span>
+            <span className="placeholder col-4"></span>
+            <span className="placeholder col-6"></span>
+            <span className="placeholder col-8"></span>
+          </MDBCardText>
+          <MDBBtn
+            href="#"
+            tabIndex={-1}
+            disabled
+            className="placeholder col-6"
+          ></MDBBtn>
+        </MDBCardBody>
+      </MDBCard>
+    </div>
   );
 }
-
-// export default function Library() {
-//   return <p>Library Page</p>;
-// }
