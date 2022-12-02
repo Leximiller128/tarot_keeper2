@@ -25,7 +25,9 @@ export default function Library() {
             aria-label="Search"
             type="Search"
           />
-          <MDBBtn outline>Search</MDBBtn>
+          <MDBBtn className="searchBtn" outline>
+            Search
+          </MDBBtn>
         </MDBInputGroup>
       </MDBContainer>
 
@@ -50,12 +52,6 @@ export default function Library() {
             <span className="placeholder col-6"></span>
             <span className="placeholder col-8"></span>
           </MDBCardText>
-          <MDBBtn
-            href="#"
-            tabIndex={-1}
-            disabled
-            className="placeholder col-6"
-          ></MDBBtn>
         </MDBCardBody>
       </MDBCard>
     </div>

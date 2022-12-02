@@ -61,6 +61,11 @@ export default function Navbar() {
                 <MDBNavbarLink>Friends' Readings</MDBNavbarLink>
               </MDBNavbarItem>
             </Link>
+            <Link to="/Login">
+              <MDBNavbarItem>
+                <MDBNavbarLink>Logout</MDBNavbarLink>
+              </MDBNavbarItem>
+            </Link>
           </MDBNavbarNav>
         </MDBCollapse>
       </MDBContainer>

@@ -4,3 +4,9 @@
     padding: 20px;
     max-width: 900px;
 }
+
+.searchBtn {
+    background-color: #FFBD01;
+    border-color: #FFBD01;
+    color: #473529;
+}
