@@ -7,10 +7,15 @@ export const GET_ME = gql`
       username
       email
       tarotCard {
-        description
-        cardId
-        image
-        title
+        name
+        arcana
+        suit
+        img
+        fortune_telling
+        keywords
+        meaning_up
+        meaning_rev
+        desc
       }
     }
   }
