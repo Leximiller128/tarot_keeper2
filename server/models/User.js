@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
 //might have to import tarot schema? Will there be tarot schema?
-const cardSchema = require('./TarotCard');
+const readingSchema = require('./Readings');
 const userSchema = new Schema(
   {
     username: {
@@ -14,14 +14,15 @@ const userSchema = new Schema(
       type: String,
       required: true,
       unique: true,
-      match: [/.+@.+\..+/, 'Must use a valid email address']
+      match: [/^([a-zA-Z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, 'Invalid Credentials']
     },
     password: {
       type: String,
       required: true
     },
-
-    tarotCard: [cardSchema]
+    //Readings Schema
+    //USer can have Multiple Readings 
+    tarotCard: [readingSchema]
   },
 
   {
