@@ -22,7 +22,13 @@ const userSchema = new Schema(
     },
     //Readings Schema
     //USer can have Multiple Readings 
-    readings: [readingSchema]
+    // readings: [readingSchema]
+    readings: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Reading'
+      }
+    ],
   },
 
   {

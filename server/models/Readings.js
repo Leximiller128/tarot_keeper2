@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const cardSchema = require('./TarotCard');
+const Card = require('./tarotCard');
 
 const readingsSchema = new Schema ({
   username: {
@@ -11,7 +11,13 @@ const readingsSchema = new Schema ({
     type: Schema.Types.ObjectId,
     default: () => new Types.ObjectId(),
   },
-  readingBody: [cardSchema],
+  cards: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Card'
+    }
+  ],
+  // readingCards: [Card],
   createdAt: {
     type: Date,
     default: Date.now,
@@ -21,4 +27,6 @@ const readingsSchema = new Schema ({
   } 
 });
 
-module.exports = readingsSchema;
+const Reading = model('Reading', readingsSchema);
+
+module.exports = Reading;
