@@ -1,12 +1,20 @@
 .text-area {
-    width: 50%;
-    margin-top: 10%;
-    margin-right: 10%;
-  }
-  
-  .card-element {
-    float: left;
-    margin-top: 50px;
-    margin-left: 10%
-  }
-  
+  width: 50%;
+  margin-top: 10%;
+  margin-right: 10%;
+}
+
+.card-element {
+  float: left;
+  margin-top: 50px;
+  margin-left: 10%;
+}
+
+#typeText {
+  margin: 15px;
+}
+
+.search-btn {
+  margin: 15px;
+  left: 40%;
+}

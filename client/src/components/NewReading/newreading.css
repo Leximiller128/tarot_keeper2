@@ -9,3 +9,12 @@
   margin-top: 50px;
   margin-left: 10%
 }
+
+#typeText {
+  margin: 15px;
+}
+
+.search-btn {
+  margin: 15px;
+  left: 40%;
+}
