@@ -1,8 +1,8 @@
 .d-flex-w-auto-mb-3 {
     justify-content: center;
-    flex: auto;
     padding: 20px;
     max-width: 900px;
+    margin-top: 20px;
 }
 
 .searchBtn {
@@ -13,4 +13,8 @@
 
 .searchBtn:hover {
     background-color: #88B8A1;
+  }
+
+  .card-element {
+    margin: 20px;
   }
