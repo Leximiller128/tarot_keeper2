@@ -10,3 +10,7 @@
     border-color: #FFBD01;
     color: #473529;
 }
+
+.searchBtn:hover {
+    background-color: #88B8A1;
+  }
