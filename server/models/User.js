@@ -22,7 +22,7 @@ const userSchema = new Schema(
     },
     //Readings Schema
     //USer can have Multiple Readings 
-    tarotCard: [readingSchema]
+    readings: [readingSchema]
   },
 
   {
