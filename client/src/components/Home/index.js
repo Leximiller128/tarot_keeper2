@@ -54,7 +54,7 @@ function Home() {
               aria-label="Search"
               type="Search"
             />
-            <MDBBtn outline>Search</MDBBtn>
+            <MDBBtn>Search</MDBBtn>
           </MDBInputGroup>
         </MDBContainer>
         <MDBInput className="new-title" label="Title for New Reading" id="typeText" type="text" />
