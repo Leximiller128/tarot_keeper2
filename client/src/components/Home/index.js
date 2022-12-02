@@ -18,7 +18,7 @@ function Home() {
   return (
     <>
       {/* Tarot card placement */}
-      <MDBCard style={{ maxWidth: "22rem" }} aria-hidden="true">
+      <MDBCard className="card-element" style={{ maxWidth: "15rem" }} aria-hidden="true">
         <MDBCardImage
           src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp"
           position="top"
@@ -45,12 +45,12 @@ function Home() {
       </MDBCard>
 
       {/* Text area and search bar */}
-      <MDBContainer>
+      <MDBContainer className="text-area">
         <MDBContainer fluid>
           <MDBInputGroup tag="form" className="d-flex w-auto mb-3">
             <input
               className="form-control"
-              placeholder="Type query"
+              placeholder="Search for Card"
               aria-label="Search"
               type="Search"
             />
