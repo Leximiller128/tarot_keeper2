@@ -3,6 +3,11 @@
   margin-top: 10%;
   margin-right: 10%;
 }
+ 
+#search-btn { 
+  background-color: #FFBD01;
+
+}
 
 .card-element {
   float: left;
@@ -14,7 +19,8 @@
   margin: 15px;
 }
 
-.search-btn {
+.submit-btn {
   margin: 15px;
   left: 40%;
+  background-color: #FFBD01;
 }

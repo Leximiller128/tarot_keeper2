@@ -54,13 +54,13 @@ export default function NewReading() {
               aria-label="Search"
               type="Search"
             />
-            <MDBBtn>Search</MDBBtn>
+            <MDBBtn id="search-btn">Search</MDBBtn>
           </MDBInputGroup>
         </MDBContainer>
         <MDBInput label="Title for New Reading" id="typeText" type="text" />
-        <MDBInput label="Inital Question Asked" id="typeText" type="text" />
+        <MDBInput label="Initial Question Asked" id="typeText" type="text" />
         <MDBTextArea label="Notes" id="textAreaExample" rows={4} />
-        <MDBBtn className="search-btn">Submit</MDBBtn>
+        <MDBBtn className="submit-btn">Submit</MDBBtn>
       </MDBContainer>
     </>
   );
