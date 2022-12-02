@@ -27,3 +27,23 @@ User will be able to add up to 8 cards per reading and will maintain the order t
 
 User will need to sign up for access to the app and login to view. User will be able to add friends and see friends tarot readings. Favorite readings can be stared at the top, private or personal readings the user does not want shared can be kept private by checking a box. Readings will be saved in list style by date and title in chronological order with newest at the top. User will be able to search their past readings but the date or title. User will be able to view friends public readings also.
 ```
+## [Installation](#table-of-contents)
+This application requires that you download the following packages using Node to run this application:
+
+<p align="center">
+<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"> 
+<p align="center">
+<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"> 
+<p align="center">
+<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white">
+<p align="center">
+<img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge">
+<p align="center">
+<img src= "https://img.shields.io/badge/npm-Mongoose-npm?style=for-the-badge&logo=npm&logoColor=white">
+</p>
+<p align= "center"> <img src= "https://img.shields.io/badge/jsonwebtoken-5E5C5C?style=for-the-badge&logo=json&logoColor=white" ></p>
+
+<p align= "center"> <img src="https://img.shields.io/badge/react%20-0088CC?style=for-the-badge&logo=reactos&logoColor=white">
+<p align= "center"> <img src="https://img.shields.io/badge/bcrypt-CB3837?style=for-the-badge&logo=npm&logoColor=white">
+<p align= "center"> <img src="">
+<p align= "center"> <img src="">
