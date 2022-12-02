@@ -23,7 +23,7 @@ function Login() {
       <MDBInputGroup className="mb-3" textBefore="Password">
         <textarea className="form-control" />
       </MDBInputGroup>
-      <MDBBtn>Login</MDBBtn>
+      <MDBBtn className="btn2">Login</MDBBtn>
     </MDBContainer>
   );
 }
