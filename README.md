@@ -45,5 +45,9 @@ This application requires that you download the following packages using Node to
 
 <p align= "center"> <img src="https://img.shields.io/badge/react%20-0088CC?style=for-the-badge&logo=reactos&logoColor=white">
 <p align= "center"> <img src="https://img.shields.io/badge/bcrypt-CB3837?style=for-the-badge&logo=npm&logoColor=white">
+
+Apollo/GraphQL
 <p align= "center"> <img src="">
+
+mdb-react-ui-kit"
 <p align= "center"> <img src="">

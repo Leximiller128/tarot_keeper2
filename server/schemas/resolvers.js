@@ -14,6 +14,10 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in!");
     },
+    //to populate other users readings (feed)
+    readings: async () => {
+      return User.find().populate('readings');
+    }
   },
   Mutation: {
     addUser: async (parent, args) => {
