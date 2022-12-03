@@ -1,7 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
-//might have to import tarot schema? Will there be tarot schema?
 const readingSchema = require('./Readings');
 const userSchema = new Schema(
   {
@@ -20,9 +19,6 @@ const userSchema = new Schema(
       type: String,
       required: true
     },
-    //Readings Schema
-    //USer can have Multiple Readings 
-    // readings: [readingSchema]
     readings: [
       {
         type: Schema.Types.ObjectId,
