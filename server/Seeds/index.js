@@ -1,12 +1,12 @@
 const db = require('../config/connection');
 const { Card } = require('../models');
 
-const cardData = require('./NEW.json');
+const cardData = require('./tarot-images.json');
 
 db.once('open', async () => {
-//   await tarotCard.deleteMany({});
+  await Card.deleteMany({});
 
-  const cards = await Card.insertMany(cardData);
+  await Card.insertMany(cardData);
 
   console.log('cards seeded!');
   process.exit(0);
