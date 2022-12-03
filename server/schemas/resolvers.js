@@ -21,6 +21,7 @@ const resolvers = {
     cards: async () => {
       return Card.find();
     },
+    
   },
   Mutation: {
     addUser: async (parent, args) => {

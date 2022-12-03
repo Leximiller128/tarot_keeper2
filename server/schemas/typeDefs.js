@@ -5,14 +5,29 @@ const typeDefs = gql`
     _id: ID!
     username: String!
     email: String!
+    readings: [Reading]
   }
   type Auth {
     token: ID!
     user: User
   }
+  type Card {
+    name: String!
+    arcana: String!
+    suit: String!
+    img: String!
+    fortune_telling: [String]!
+    keywords: [String]!
+    meaning_rev: String!
+    meaning_up: String!
+    desc: String!
+  }
   type Query {
     me: User
+    readings: User
+    cards: Card
   }
+  
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
