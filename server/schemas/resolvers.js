@@ -1,4 +1,4 @@
-const { User } = require("../models");
+const { User, Card } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
 
@@ -17,7 +17,10 @@ const resolvers = {
     //to populate other users readings (feed)
     readings: async () => {
       return User.find().populate('readings');
-    }
+    },
+    cards: async () => {
+      return Card.find();
+    },
   },
   Mutation: {
     addUser: async (parent, args) => {
