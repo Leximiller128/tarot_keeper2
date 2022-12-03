@@ -17,7 +17,6 @@ const readingsSchema = new Schema ({
       ref: 'Card'
     }
   ],
-  // readingCards: [Card],
   createdAt: {
     type: Date,
     default: Date.now,
