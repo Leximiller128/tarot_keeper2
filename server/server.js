@@ -12,7 +12,7 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: authMiddleware,
+  // context: authMiddleware,
 });
 
 app.use(express.urlencoded({ extended: false }));
@@ -40,6 +40,5 @@ const startApolloServer = async (typeDefs, resolvers) => {
       );
     });
   });
-  // Call the async function to start the server
-  startApolloServer(typeDefs, resolvers);
 };
+startApolloServer(typeDefs, resolvers);

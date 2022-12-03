@@ -5,13 +5,14 @@ const typeDefs = gql`
     _id: ID!
     username: String!
     email: String!
-    readings: [Reading]
+    readings: [Reading]!
   }
   type Auth {
     token: ID!
     user: User
   }
   type Card {
+    _id: ID!
     name: String!
     arcana: String!
     suit: String!
@@ -22,12 +23,18 @@ const typeDefs = gql`
     meaning_up: String!
     desc: String!
   }
+  type Reading {
+    _id: ID!
+    username: String!
+    cards: [Card]
+    createdAt: String!
+  }
   type Query {
     me: User
     readings: User
-    cards: Card
+    cards: [Card]
   }
-  
+
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
