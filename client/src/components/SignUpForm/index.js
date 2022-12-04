@@ -57,24 +57,57 @@ function SignupForm() {
   };
 
   return (
-    <MDBContainer>
-      <MDBInputGroup className="mb-3" textBefore="Email">
-        <textarea className="form-control" />
-      </MDBInputGroup>
+    // <MDBContainer>
+    //   <MDBInputGroup className="mb-3" textBefore="Email">
+    //     <textarea className="form-control" />
+    //   </MDBInputGroup>
 
-      <MDBInputGroup className="mb-3" textBefore="Username">
-        <textarea className="form-control" />
-      </MDBInputGroup>
-      <MDBInputGroup className="mb-3" textBefore="Password">
-        <textarea className="form-control" />
-      </MDBInputGroup>
-      <MDBBtn>Create New User</MDBBtn>
-      {errorMessage && (
-        <div>
-          <p className="error-text">{errorMessage}</p>
-        </div>
-      )}
-    </MDBContainer>
+    //   <MDBInputGroup className="mb-3" textBefore="Username">
+    //     <textarea className="form-control" />
+    //   </MDBInputGroup>
+    //   <MDBInputGroup className="mb-3" textBefore="Password">
+    //     <textarea className="form-control" />
+    //   </MDBInputGroup>
+    //   <MDBBtn>Create New User</MDBBtn>
+    //   {errorMessage && (
+    //     <div>
+    //       <p className="error-text">{errorMessage}</p>
+    //     </div>
+    //   )}
+    // </MDBContainer>
+    <form onSubmit={handleFormSubmit}>
+    <input
+      className="form-input"
+      placeholder="Your username"
+      name="userName"
+      type="text"
+      value={userName}
+      onChange={handleInputChange}
+    />
+    <input
+      className="form-input"
+      placeholder="Your email"
+      name="email"
+      type="email"
+      value={email}
+      onChange={handleInputChange}
+    />
+    <input
+      className="form-input"
+      placeholder="******"
+      name="password"
+      type="password"
+      value={password}
+      onChange={handleInputChange}
+    />
+    <button
+      className="btn btn-block btn-primary"
+      style={{ cursor: 'pointer' }}
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
   );
 }
 
