@@ -21,7 +21,10 @@ const resolvers = {
     cards: async () => {
       return Card.find();
     },
-    
+    singleCard: async (parent, { name }) => {
+      const params = name ? { name } : {};
+      return Card.findOne(params);
+    }
   },
   Mutation: {
     addUser: async (parent, args) => {

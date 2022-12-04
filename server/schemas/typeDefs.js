@@ -33,6 +33,7 @@ const typeDefs = gql`
     me: User
     readings: User
     cards: [Card]
+    singleCard(card: String!): Card
   }
 
   type Mutation {
