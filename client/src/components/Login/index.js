@@ -2,19 +2,21 @@ import "./login.css";
 import React, { useState } from "react";
 import { LOGIN } from "../../graphql/mutations/login";
 import Auth from "../../utils/auth";
+import signupForm from "../SignUpForm";
+import { Link } from "react-router-dom";
 
-import {
-  MDBContainer,
-  MDBBtn,
-  MDBInputGroup,
-  // MDBTextArea,
-  // MDBInput,
-  // MDBCard,
-  // MDBCardText,
-  // MDBCardTitle,
-  // MDBCardBody,
-  // MDBCardImage,
-} from "mdb-react-ui-kit";
+// import {
+//   MDBContainer,
+//   MDBBtn,
+//   MDBInputGroup,
+//   // MDBTextArea,
+//   // MDBInput,
+//   // MDBCard,
+//   // MDBCardText,
+//   // MDBCardTitle,
+//   // MDBCardBody,
+//   // MDBCardImage,
+// } from "mdb-react-ui-kit";
 
 import { checkPassword, validateEmail } from "../../utils/helpers";
 import { useMutation } from "@apollo/client";
@@ -35,6 +37,11 @@ function Login() {
       setPassword(inputValue);
     }
   };
+
+  // const signupForm = () => {
+  //   let path = "../SignUpForm";
+  //   history.push(path);
+  // };
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -99,6 +106,17 @@ function Login() {
       >
         Submit
       </button>
+
+      <Link
+        to="/signupForm"
+        className="btn btn-block btn-primary"
+        id="signupBtn"
+        style={{ cursor: "pointer" }}
+        type="submit"
+        onClick={signupForm}
+      >
+        Not a user? Signup here!
+      </Link>
     </form>
   );
 }
