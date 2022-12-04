@@ -15,7 +15,6 @@ import {
   // MDBCardImage,
 } from "mdb-react-ui-kit";
 
-import { checkPassword, validateEmail } from "../../utils/helpers";
 import { useMutation } from "@apollo/client";
 
 function SignupForm() {
