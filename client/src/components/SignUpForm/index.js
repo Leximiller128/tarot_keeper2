@@ -23,7 +23,7 @@ function SignupForm() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const [createUser, {error, data}] = useMutation(CREATE_USER);
+  const [addUser, {error, data}] = useMutation(CREATE_USER);
   const handleInputChange = (e) => {
     const { target } = e;
     const inputType = target.name;
@@ -41,28 +41,28 @@ function SignupForm() {
   const handleFormSubmit = async(e) => {
     e.preventDefault();
 
-    if (!validateEmail(email) || !userName) {
-      setErrorMessage("Email or username is invalid");
+    // if (!validateEmail(email) || !userName) {
+    //   setErrorMessage("Email or username is invalid");
 
-      return;
-    }
-    if (!checkPassword(password)) {
-      setErrorMessage(
-        `Choose a more secure password for the account: ${userName}`
-      );
-      return;
-    }
+    //   return;
+    // }
+    // if (!checkPassword(password)) {
+    //   setErrorMessage(
+    //     `Choose a more secure password for the account: ${userName}`
+    //   );
+    //   return;
+    // }
 
-    setUserName("");
-    setPassword("");
-    setEmail("");
     try {
-      const {data} = await createUser({ variables: {userName, email, password}})
-      Auth.login(data.createUser.token);
+      const {data} = await addUser({ variables: {userName, email, password}})
+      Auth.login(data.addUser.token);
     } catch (error) {
       console.log(error);
     }
     alert(`Hello ${userName}`);
+    setUserName("");
+    setPassword("");
+    setEmail("");
   };
 
   return (
