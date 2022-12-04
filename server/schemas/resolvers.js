@@ -1,7 +1,6 @@
-const { User, Card } = require("../models");
+const { User, Card, Reading } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
-
 
 const resolvers = {
   Query: {
@@ -16,7 +15,7 @@ const resolvers = {
     },
     //to populate other users readings (feed)
     readings: async () => {
-      return User.find().populate('readings');
+      return User.find().populate("readings");
     },
     cards: async () => {
       return Card.find();
@@ -24,9 +23,17 @@ const resolvers = {
     singleCard: async (parent, { name }) => {
       const params = name ? { name } : {};
       return Card.findOne(params);
-    }
+    },
   },
   Mutation: {
+    //untested: needs authentication to work
+    addReading: async (parent, args) => {
+      if (context.user) {
+        const readingData = await Reading.create(args);
+        return { readingData };
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
     addUser: async (parent, args) => {
       const userData = await User.create(args);
       const token = signToken(userData);
@@ -48,6 +55,7 @@ const resolvers = {
 
       return { token, user };
     },
+    //works in theory! which is great.
     saveCard: async (parent, { newCard }, context) => {
       if (context.user) {
         const updatedUser = await User.findByIdAndUpdate(
@@ -69,7 +77,7 @@ const resolvers = {
         return updatedUser;
       }
       throw new AuthenticationError("You need to be logged in!");
-},
+    },
   },
 };
 
