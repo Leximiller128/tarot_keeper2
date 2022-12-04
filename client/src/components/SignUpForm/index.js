@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./signupform.css";
+import { CREATE_USER } from "../../graphql/mutations/createUser";
+import Auth from '../../utils/auth';
 import {
   MDBContainer,
   MDBBtn,
@@ -14,13 +16,14 @@ import {
 } from "mdb-react-ui-kit";
 
 import { checkPassword, validateEmail } from "../../utils/helpers";
+import { useMutation } from "@apollo/client";
 
 function SignupForm() {
   const [email, setEmail] = useState("");
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-
+  const [createUser, {error, data}] = useMutation(CREATE_USER);
   const handleInputChange = (e) => {
     const { target } = e;
     const inputType = target.name;
@@ -35,7 +38,7 @@ function SignupForm() {
     }
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async(e) => {
     e.preventDefault();
 
     if (!validateEmail(email) || !userName) {
@@ -53,6 +56,12 @@ function SignupForm() {
     setUserName("");
     setPassword("");
     setEmail("");
+    try {
+      const {data} = await createUser({ variables: {userName, email, password}})
+      Auth.login(data.createUser.token);
+    } catch (error) {
+      console.log(error);
+    }
     alert(`Hello ${userName}`);
   };
 
