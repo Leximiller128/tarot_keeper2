@@ -9,7 +9,7 @@ import {
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import Footer from "./components/Footer";
-import Home from "./components/Home";
+// import Home from "./components/Home";
 import Library from "./components/Library";
 import Navigation from "./components/Nav/Navigation";
 import NewReading from "./components/NewReading";
