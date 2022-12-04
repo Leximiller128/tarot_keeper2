@@ -20,7 +20,7 @@ import { useMutation } from "@apollo/client";
 
 function SignupForm() {
   const [email, setEmail] = useState("");
-  const [userName, setUserName] = useState("");
+  const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [addUser, {error, data}] = useMutation(CREATE_USER);
@@ -31,7 +31,7 @@ function SignupForm() {
 
     if (inputType === "email") {
       setEmail(inputValue);
-    } else if (inputType === "userName") {
+    } else if (inputType === "username") {
       setUserName(inputValue);
     } else if (inputType === "password") {
       setPassword(inputValue);
@@ -53,13 +53,14 @@ function SignupForm() {
     //   return;
     // }
 
+    console.log({username, email, password});
     try {
-      const {data} = await addUser({ variables: {userName, email, password}})
+      const {data} = await addUser({ variables: {username, email, password}})
       Auth.login(data.addUser.token);
     } catch (error) {
       console.log(error);
     }
-    alert(`Hello ${userName}`);
+    alert(`Hello ${username}`);
     setUserName("");
     setPassword("");
     setEmail("");
@@ -88,9 +89,9 @@ function SignupForm() {
     <input
       className="form-input"
       placeholder="Your username"
-      name="userName"
+      name="username"
       type="text"
-      value={userName}
+      value={username}
       onChange={handleInputChange}
     />
     <input
