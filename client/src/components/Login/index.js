@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 
 function Login() {
-
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });
   // const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
@@ -25,12 +24,12 @@ function Login() {
       [name]: value,
     });
 
-    console.log( "state is being chnaged")
+    console.log("state is being chnaged");
   };
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    console.log("hello")
+    console.log("hello");
     // console.log({ email, password });
     // console.log({data})
 
@@ -41,28 +40,21 @@ function Login() {
       });
       Auth.login(data.login);
 
-      
-
-
       window.location.assign(`/newReading`);
-
     } catch (error) {
       console.error(error);
-      setErrorMessage(true)
+      setErrorMessage(true);
     }
     alert(`Hello ${userFormData.email}`);
 
-
     setUserFormData({
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     });
-
   };
 
   return (
-    <form onSubmit={handleFormSubmit}
-    validated={validated}>
+    <form onSubmit={handleFormSubmit} validated={validated}>
       <input
         className="form-input"
         placeholder="Your email"
@@ -81,8 +73,8 @@ function Login() {
       />
       <button
         // to="/newReading"
-        className="btn btn-block btn-primary"
-        id="signupBtn"
+        className="btn"
+        id="signupBtn2"
         style={{ cursor: "pointer" }}
         type="submit"
         // onClick={newReading}
