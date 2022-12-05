@@ -4,54 +4,71 @@ import { LOGIN } from "../../graphql/mutations/login";
 import Auth from "../../utils/auth";
 import signupForm from "../SignUpForm";
 import { Link } from "react-router-dom";
-import newReading from "../NewReading";
+// import newReading from "../NewReading";
 
-import { checkPassword, validateEmail } from "../../utils/helpers";
+// import { checkPassword, validateEmail } from "../../utils/helpers";
 import { useMutation } from "@apollo/client";
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-  const [login, { error, data }] = useMutation(LOGIN);
-  const handleInputChange = (e) => {
-    const { target } = e;
-    const inputType = target.name;
-    const inputValue = target.value;
 
-    if (inputType === "email") {
-      setEmail(inputValue);
-    } else if (inputType === "password") {
-      setPassword(inputValue);
-    }
+  const [userFormData, setUserFormData] = useState({ email: "", password: "" });
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState(false);
+  const [login, { error }] = useMutation(LOGIN);
+  const [validated] = useState(false);
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    setUserFormData({
+      ...userFormData,
+      [name]: value,
+    });
+
+    console.log( "state is being chnaged")
   };
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-
-    console.log({ email, password });
+    console.log("hello")
+    // console.log({ email, password });
+    // console.log({data})
 
     try {
+      // console.log({data})
       const { data } = await login({
-        variables: { email, password },
+        variables: { ...userFormData },
       });
-      Auth.login(data.login.token);
+      Auth.login(data.login);
+
+      
+
+
+      window.location.assign(`/newReading`);
+
     } catch (error) {
-      console.log(error);
+      console.error(error);
+      setErrorMessage(true)
     }
-    alert(`Hello ${email}`);
-    setPassword("");
-    setEmail("");
+    alert(`Hello ${userFormData.email}`);
+
+
+    setUserFormData({
+      email: '',
+      password: '',
+    });
+
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form onSubmit={handleFormSubmit}
+    validated={validated}>
       <input
         className="form-input"
         placeholder="Your email"
         name="email"
         type="email"
-        value={email}
+        value={userFormData.email}
         onChange={handleInputChange}
       />
       <input
@@ -59,19 +76,19 @@ function Login() {
         placeholder="******"
         name="password"
         type="password"
-        value={password}
+        value={userFormData.password}
         onChange={handleInputChange}
       />
-      <Link
-        to="/newReading"
+      <button
+        // to="/newReading"
         className="btn btn-block btn-primary"
         id="signupBtn"
         style={{ cursor: "pointer" }}
         type="submit"
-        onClick={newReading}
+        // onClick={newReading}
       >
         Sign In!
-      </Link>
+      </button>
 
       <Link
         to="/signupForm"
