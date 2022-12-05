@@ -5,19 +5,6 @@ import Auth from "../../utils/auth";
 import signupForm from "../SignUpForm";
 import { Link } from "react-router-dom";
 
-// import {
-//   MDBContainer,
-//   MDBBtn,
-//   MDBInputGroup,
-//   // MDBTextArea,
-//   // MDBInput,
-//   // MDBCard,
-//   // MDBCardText,
-//   // MDBCardTitle,
-//   // MDBCardBody,
-//   // MDBCardImage,
-// } from "mdb-react-ui-kit";
-
 import { checkPassword, validateEmail } from "../../utils/helpers";
 import { useMutation } from "@apollo/client";
 
@@ -38,27 +25,11 @@ function Login() {
     }
   };
 
-  // const signupForm = () => {
-  //   let path = "../SignUpForm";
-  //   history.push(path);
-  // };
-
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
-    // if (!validateEmail(email) || !userName) {
-    //   setErrorMessage("Email or username is invalid");
-
-    //   return;
-    // }
-    // if (!checkPassword(password)) {
-    //   setErrorMessage(
-    //     `Choose a more secure password for the account: ${userName}`
-    //   );
-    //   return;
-    // }
-
     console.log({ email, password });
+
     try {
       const { data } = await login({
         variables: { email, password },
@@ -73,15 +44,6 @@ function Login() {
   };
 
   return (
-    // <MDBContainer>
-    //   <MDBInputGroup className="mb-3" textBefore="Username">
-    //     <textarea className="form-control" />
-    //   </MDBInputGroup>
-    //   <MDBInputGroup className="mb-3" textBefore="Password">
-    //     <textarea className="form-control" />
-    //   </MDBInputGroup>
-    //   <MDBBtn className="btn2">Login</MDBBtn>
-    // </MDBContainer>
     <form onSubmit={handleFormSubmit}>
       <input
         className="form-input"

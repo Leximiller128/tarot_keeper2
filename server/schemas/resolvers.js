@@ -27,13 +27,13 @@ const resolvers = {
   },
   Mutation: {
     //untested: needs authentication to work
-    addReading: async (parent, args) => {
-      if (context.user) {
-        const readingData = await Reading.create(args);
-        return { readingData };
-      }
-      throw new AuthenticationError("You need to be logged in!");
-    },
+    // addReading: async (parent, args) => {
+    //   if (context.user) {
+    //     const readingData = await Reading.create(args);
+    //     return { readingData };
+    //   }
+    //   throw new AuthenticationError("You need to be logged in!");
+    // },
     addUser: async (parent, args) => {
       const userData = await User.create(args);
       const token = signToken(userData);
