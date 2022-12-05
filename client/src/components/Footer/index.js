@@ -17,7 +17,7 @@ function Footer() {
             floating
             size="lg"
             className="text-dark m-1"
-            href="#!"
+            href="https://www.facebook.com/tarotcard/"
             role="button"
           >
             <MDBIcon fab className="fab fa-facebook-f" />
@@ -29,7 +29,7 @@ function Footer() {
             floating
             size="lg"
             className="text-dark m-1"
-            href="https://www.facebook.com/tarotcard/"
+            href="https://twitter.com/search?q=%23tarot"
             role="button"
           >
             <MDBIcon fab className="fa-twitter" />
@@ -41,7 +41,7 @@ function Footer() {
             floating
             size="lg"
             className="text-dark m-1"
-            href="#!https://twitter.com/search?q=%23tarot"
+            href="https://www.google.com/search?q=tarot+card"
             role="button"
           >
             <MDBIcon fab className="fa-google" />
@@ -53,23 +53,23 @@ function Footer() {
             floating
             size="lg"
             className="text-dark m-1"
-            href="#!https://www.google.com/search?q=tarot+card"
+            href="https://www.instagram.com/explore/tags/tarotcards/?hl=en"
             role="button"
           >
             <MDBIcon fab className="fa-instagram" />
           </MDBBtn>
 
-          <MDBBtn
+          {/* <MDBBtn
             rippleColor="dark"
             color="link"
             floating
             size="lg"
             className="text-dark m-1"
-            href="#!https://www.instagram.com/explore/tags/tarotcards/?hl=en"
+            href="https://www.instagram.com/explore/tags/tarotcards/?hl=en"
             role="button"
           >
             <MDBIcon fab className="fa-linkedin" />
-          </MDBBtn>
+          </MDBBtn> */}
 
           <MDBBtn
             rippleColor="dark"
@@ -77,7 +77,7 @@ function Footer() {
             floating
             size="lg"
             className="text-dark m-1"
-            href="#!"
+            href="https://github.com/Leximiller128/tarot_keeper2"
             role="button"
           >
             <MDBIcon fab className="fa-github" />

@@ -20,7 +20,7 @@ export default function Navbar() {
   const [showNavText, setShowNavText] = useState(false);
 
   return (
-    <MDBNavbar expand="lg" light bgColor="light">
+    <MDBNavbar expand="lg" style={{ backgroundColor: "#88B8A1" }}>
       <MDBContainer fluid>
         <Link to="/">
           <MDBNavbarBrand>Tarot Keeper</MDBNavbarBrand>
