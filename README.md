@@ -18,6 +18,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## [Description](#table-of-contents)
+This application would allow users to save their Tarot readings When they create an account so that they can come back to it without the long thinking proccess of that aha moment, when this application can save that for you including images, Decription and other information about that specific card.
+
+Tarot card users have no way of keeping track of cards from readings the past in order to review or reflect. This app keeps track of cards you pulled in past readings, the date they were pulled and notes associated with them.
+
+your readings are there for you at a press of a sign in or a sign up but your friends readings are also very much viewable once an account has been created and users have been added to you.
 
 ### User Story
 
@@ -74,6 +79,19 @@ npm run develop
 ## [Database Models](#table-of-contents)
 
 ## [Usage](#table-of-contents)
+
+## [Collaborators](#table-of-contents)
+Collaborators who worked on this application were students of DU University Bootcamp
+<center>
+
+|Collaborator|GitHub|Linkden|email|
+|:----|:----:|:----:|:----:|
+| Kaleb Rittenhouse | [kalebritt](https://github.com/kalebritt) | [k-ritt](https://www.linkedin.com/in/k-ritt/) | [kaleb.rittenhouse@gmail.com](mailto:kaleb.rittenhouse@gmail.com) |
+| Lexi Miller | [Leximiller128](https://github.com/Leximiller128) | [leximiller128](https://www.linkedin.com/in/leximiller128/) | [leximiller128@gmail.com](mailto:leximiller128@gmail.com) |
+| Dana Golebiewski |[danagolebiewski](https://github.com/danagolebiewski)|[danagolebiewski](https://www.linkedin.com/in/danagolebiewski/)| [dana.golebiewski@gmail.com](mailto:dana.golebiewski@gmail.com) |
+| Lorena Morales |[Lorena-RM](https://github.com/Lorena-RM)|[Lorena Morales](https://www.linkedin.com/in/lorena-morales-496855240/)| [lorenarm.999@gmail.com](mailto:lorenarm.999@gmail.com) |
+
+</center>
 
 ## [Resources](#table-of-contents)
 
