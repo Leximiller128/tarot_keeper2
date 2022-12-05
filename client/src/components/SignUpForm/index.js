@@ -2,59 +2,73 @@ import React, { useState } from "react";
 import "./signupform.css";
 import { CREATE_USER } from "../../graphql/mutations/createUser";
 import Auth from "../../utils/auth";
+// import {validateEmail, checkPassword} from "../../utils/helpers"
 import login from "../Login";
 import { Link } from "react-router-dom";
 
 import { useMutation } from "@apollo/client";
 
 function SignupForm() {
-  const [email, setEmail] = useState("");
-  const [username, setUserName] = useState("");
-  const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-  const [addUser, { error, data }] = useMutation(CREATE_USER);
-  const handleInputChange = (e) => {
-    const { target } = e;
-    const inputType = target.name;
-    const inputValue = target.value;
+  const [formState, setFormState] = useState({
+    username: '',
+    email: '',
+    password: '',
+  });
 
-    if (inputType === "email") {
-      setEmail(inputValue);
-    } else if (inputType === "username") {
-      setUserName(inputValue);
-    } else if (inputType === "password") {
-      setPassword(inputValue);
-    }
+  // const [errorMessage, setErrorMessage] = useState("");
+  const [addUser] = useMutation(CREATE_USER);
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
   };
+
+    // const { target } = e;
+    // const inputType = target.name;
+    // const inputValue = target.value;
+
+    // if (inputType === "email") {
+    //   setEmail(inputValue);
+    // } else if (inputType === "username") {
+    //   setUserName(inputValue);
+    // } else if (inputType === "password") {
+    //   setPassword(inputValue);
+    // }
+  
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+    console.log("we are here after event.prevent")
 
-    // if (!validateEmail(email) || !userName) {
+    // if (!validateEmail(email)) {
     //   setErrorMessage("Email or username is invalid");
 
     //   return;
     // }
     // if (!checkPassword(password)) {
     //   setErrorMessage(
-    //     `Choose a more secure password for the account: ${userName}`
+    //     `Choose a more secure password for the account`
     //   );
     //   return;
     // }
 
-    console.log({ username, email, password });
+    // console.log({ username, email, password });
     try {
       const { data } = await addUser({
-        variables: { username, email, password },
+        variables: { ...formState },
       });
+      console.log("try")
       Auth.login(data.addUser.token);
+      
+      alert(`Hello ${formState.username}`);
+     
     } catch (error) {
+      console.log("catch")
       console.log(error);
     }
-    alert(`Hello ${username}`);
-    setUserName("");
-    setPassword("");
-    setEmail("");
   };
 
   return (
@@ -82,7 +96,7 @@ function SignupForm() {
         placeholder="Your username"
         name="username"
         type="text"
-        value={username}
+        value={formState.username}
         onChange={handleInputChange}
       />
       <input
@@ -90,7 +104,7 @@ function SignupForm() {
         placeholder="Your email"
         name="email"
         type="email"
-        value={email}
+        value={formState.email}
         onChange={handleInputChange}
       />
       <input
@@ -98,7 +112,7 @@ function SignupForm() {
         placeholder="******"
         name="password"
         type="password"
-        value={password}
+        value={formState.password}
         onChange={handleInputChange}
       />
       <button

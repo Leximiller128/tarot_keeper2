@@ -13,7 +13,7 @@ function Login() {
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });
   // const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState(false);
+  // const [errorMessage, setErrorMessage] = useState(false);
   const [login, { error }] = useMutation(LOGIN);
   const [validated] = useState(false);
   const handleInputChange = (e) => {
@@ -29,7 +29,6 @@ function Login() {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    console.log("hello");
     // console.log({ email, password });
     // console.log({data})
 
@@ -42,8 +41,13 @@ function Login() {
 
       window.location.assign(`/newReading`);
     } catch (error) {
+
+      console.log(error);
+      // setErrorMessage(true)
+
       console.error(error);
       setErrorMessage(true);
+
     }
     alert(`Hello ${userFormData.email}`);
 
