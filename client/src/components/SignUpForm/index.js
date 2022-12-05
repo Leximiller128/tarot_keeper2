@@ -1,19 +1,9 @@
 import React, { useState } from "react";
 import "./signupform.css";
 import { CREATE_USER } from "../../graphql/mutations/createUser";
-import Auth from '../../utils/auth';
-import {
-  MDBContainer,
-  MDBBtn,
-  MDBInputGroup,
-  // MDBTextArea,
-  // MDBInput,
-  // MDBCard,
-  // MDBCardText,
-  // MDBCardTitle,
-  // MDBCardBody,
-  // MDBCardImage,
-} from "mdb-react-ui-kit";
+import Auth from "../../utils/auth";
+import login from "../Login";
+import { Link } from "react-router-dom";
 
 import { useMutation } from "@apollo/client";
 
@@ -22,7 +12,7 @@ function SignupForm() {
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const [addUser, {error, data}] = useMutation(CREATE_USER);
+  const [addUser, { error, data }] = useMutation(CREATE_USER);
   const handleInputChange = (e) => {
     const { target } = e;
     const inputType = target.name;
@@ -37,7 +27,7 @@ function SignupForm() {
     }
   };
 
-  const handleFormSubmit = async(e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
 
     // if (!validateEmail(email) || !userName) {
@@ -52,9 +42,11 @@ function SignupForm() {
     //   return;
     // }
 
-    console.log({username, email, password});
+    console.log({ username, email, password });
     try {
-      const {data} = await addUser({ variables: {username, email, password}})
+      const { data } = await addUser({
+        variables: { username, email, password },
+      });
       Auth.login(data.addUser.token);
     } catch (error) {
       console.log(error);
@@ -85,38 +77,48 @@ function SignupForm() {
     //   )}
     // </MDBContainer>
     <form onSubmit={handleFormSubmit}>
-    <input
-      className="form-input"
-      placeholder="Your username"
-      name="username"
-      type="text"
-      value={username}
-      onChange={handleInputChange}
-    />
-    <input
-      className="form-input"
-      placeholder="Your email"
-      name="email"
-      type="email"
-      value={email}
-      onChange={handleInputChange}
-    />
-    <input
-      className="form-input"
-      placeholder="******"
-      name="password"
-      type="password"
-      value={password}
-      onChange={handleInputChange}
-    />
-    <button
-      className="btn btn-block btn-primary"
-      style={{ cursor: 'pointer' }}
-      type="submit"
-    >
-      Submit
-    </button>
-  </form>
+      <input
+        className="form-input"
+        placeholder="Your username"
+        name="username"
+        type="text"
+        value={username}
+        onChange={handleInputChange}
+      />
+      <input
+        className="form-input"
+        placeholder="Your email"
+        name="email"
+        type="email"
+        value={email}
+        onChange={handleInputChange}
+      />
+      <input
+        className="form-input"
+        placeholder="******"
+        name="password"
+        type="password"
+        value={password}
+        onChange={handleInputChange}
+      />
+      <button
+        className="btn btn-block btn-primary"
+        style={{ cursor: "pointer" }}
+        type="submit"
+      >
+        Submit
+      </button>
+      <Link
+        to="/login"
+        className="btn btn-block btn-primary"
+        id="signupBtn"
+        style={{ cursor: "pointer" }}
+        type="submit"
+        onClick={login}
+      >
+        Already a user, sign in here!
+      </Link>
+    </form>
   );
 }
 

@@ -4,6 +4,7 @@ import { LOGIN } from "../../graphql/mutations/login";
 import Auth from "../../utils/auth";
 import signupForm from "../SignUpForm";
 import { Link } from "react-router-dom";
+import newReading from "../NewReading";
 
 import { checkPassword, validateEmail } from "../../utils/helpers";
 import { useMutation } from "@apollo/client";
@@ -61,13 +62,16 @@ function Login() {
         value={password}
         onChange={handleInputChange}
       />
-      <button
+      <Link
+        to="/newReading"
         className="btn btn-block btn-primary"
+        id="signupBtn"
         style={{ cursor: "pointer" }}
         type="submit"
+        onClick={newReading}
       >
-        Submit
-      </button>
+        Sign In!
+      </Link>
 
       <Link
         to="/signupForm"
