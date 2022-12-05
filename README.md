@@ -1,3 +1,7 @@
+<h1 align="center"> <a href="#">
+My Tarot Keeper 🔮</a>
+</h1>
+
 <p align="center"> For a Detailed Video Walkthrough you can follow the link in the Title of this one -> <a href= "#">Video Walkthrough</a></p>
 
 ## Table of Contents
