@@ -4,7 +4,7 @@ import "../NewReading/newreading.css";
 import { useQuery } from "@apollo/client";
 import { ALL_CARDS } from "../../graphql/queries";
 import { useState } from "react";
-import SearchCard from "../NewReading/searchcard";
+import LibraryCard from "./librarycard";
 
 import React from "react";
 import {
@@ -68,7 +68,7 @@ const Library = () => {
             </MDBDropdown>
           </MDBContainer>
 
-          <SearchCard card={cardOption} />
+          <LibraryCard card={cardOption} />
         </>
       ) : (
         <Navigate to="/" replace />
