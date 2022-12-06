@@ -90,6 +90,7 @@ function SignupForm() {
       />
       <button
         className="btn btn-block btn-primary"
+        id="signinsubmitbtn"
         style={{ cursor: "pointer" }}
         type="submit"
       >
