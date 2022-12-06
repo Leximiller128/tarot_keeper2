@@ -21,6 +21,7 @@
 
 #typeText {
   margin: 15px;
+  min-width: 400px;
 }
 
 .submit-btn {
@@ -40,6 +41,7 @@
  #typeText{
   display: flex;
   order: 2;
+  min-width: 300px;
  }
  .card-element{
   display: flex;
