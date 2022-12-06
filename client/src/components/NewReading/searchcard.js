@@ -1,4 +1,5 @@
 import { useQuery } from "@apollo/client";
+import "./newreading.css";
 import { SEARCH_CARD } from "../../graphql/queries";
 import {
   MDBContainer,
@@ -32,7 +33,7 @@ const searchSingleCard = ({ card }) => {
             <MDBCardTitle>
               <span className=" col-6">{card.name}</span>
             </MDBCardTitle>
-            <MDBCardText>Description: {card.desc}</MDBCardText>
+            <MDBCardText class="cardDesc">Description: {card.desc}</MDBCardText>
             <MDBBtn id="search-btn">Add Card</MDBBtn>
           </MDBCardBody>
         </MDBCard>
