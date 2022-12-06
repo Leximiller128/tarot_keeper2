@@ -34,10 +34,10 @@ const resolvers = {
     //   }
     //   throw new AuthenticationError("You need to be logged in!");
     // },
-    addUser: async (parent, { username, email,password}) => {
-      const userData = await User.create({ username, email,password});
+    addUser: async (parent, args) => {
+      const userData = await User.create(args);
       const token = signToken(userData);
-      return { userData, token };
+      return { token, userData };
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });

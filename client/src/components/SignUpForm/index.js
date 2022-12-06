@@ -16,7 +16,7 @@ function SignupForm() {
   });
 
   // const [errorMessage, setErrorMessage] = useState("");
-  const [addUser] = useMutation(CREATE_USER);
+  const [addUser, {error, data}] = useMutation(CREATE_USER);
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
@@ -25,37 +25,10 @@ function SignupForm() {
       [name]: value,
     });
   };
-
-    // const { target } = e;
-    // const inputType = target.name;
-    // const inputValue = target.value;
-
-    // if (inputType === "email") {
-    //   setEmail(inputValue);
-    // } else if (inputType === "username") {
-    //   setUserName(inputValue);
-    // } else if (inputType === "password") {
-    //   setPassword(inputValue);
-    // }
-  
-
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     console.log("we are here after event.prevent")
 
-    // if (!validateEmail(email)) {
-    //   setErrorMessage("Email or username is invalid");
-
-    //   return;
-    // }
-    // if (!checkPassword(password)) {
-    //   setErrorMessage(
-    //     `Choose a more secure password for the account`
-    //   );
-    //   return;
-    // }
-
-    // console.log({ username, email, password });
     try {
       const { data } = await addUser({
         variables: { ...formState },
