@@ -32,7 +32,7 @@ const libraryCard = ({ card }) => {
             <MDBCardTitle>
               <span className=" col-6">{card.name}</span>
             </MDBCardTitle>
-            <MDBCardText>Description: {card.desc}</MDBCardText>
+            <MDBCardText class="cardDesc">Description: {card.desc}</MDBCardText>
           </MDBCardBody>
         </MDBCard>
       )}

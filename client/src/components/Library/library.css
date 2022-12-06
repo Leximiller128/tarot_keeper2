@@ -23,3 +23,11 @@
   .d-flex-w-auto-mb-3 {
    justify-items: center;
   }
+
+  .cardDesc{
+    padding: 5px;
+    margin-top: 5px;
+    width: 100%;
+    height: 350px;
+    overflow-y: scroll;
+}
