@@ -25,21 +25,15 @@ import {
 
 const NewReadingForm = () => {
   const { loading, data } = useQuery(ALL_CARDS);
-  // const cardList = data?.allCards || [];
-  // const map1 = data.cards.map(x=> x.name)
-  // console.log(map1)
 
-  const [cardOption, setCardOption] = useState("");
+  const [cardOption, setCardOption] = useState(null);
   const handleChangeEvent = (e) => {
-    // console.log(e.target.innerText);
-    setCardOption(e.target.innerText);
-    // console.log(cardOption);
+    console.log("handle change");
+    // setCardOption(e.target.innerText);
   };
 
   return (
     <>
-      {/* Tarot card placement */}
-      <SearchCard></SearchCard>
       {/* Text area and search bar */}
       <MDBContainer className="text-area">
         <MDBDropdown>
@@ -55,13 +49,14 @@ const NewReadingForm = () => {
             <MDBDropdownItem>Choose a card!</MDBDropdownItem>
             {!loading
               ? data.cards.map((card) => (
-                  // data.cards.map
                   <MDBDropdownItem
                     link
                     childTag="button"
                     key={card._id}
                     value={card._id}
-                    onClick={handleChangeEvent}
+                    onClick={(e) => {
+                      setCardOption(card);
+                    }}
                   >
                     {card.name}
                   </MDBDropdownItem>
@@ -75,6 +70,8 @@ const NewReadingForm = () => {
         <MDBTextArea label="Notes" id="typeText" rows={4} />
         <MDBBtn className="submit-btn">Submit</MDBBtn>
       </MDBContainer>
+      {/* Tarot card placement */}
+      <SearchCard card={cardOption} />
     </>
   );
 };
