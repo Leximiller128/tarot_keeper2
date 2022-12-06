@@ -7,7 +7,7 @@ function Footer() {
   return (
     <MDBFooter
       className="text-center text-white"
-      style={{ backgroundColor: "#FF4326" }}
+      style={{ backgroundColor: "whitesmoke" }}
     >
       <MDBContainer className="pt-4">
         <section className="mb-4">
