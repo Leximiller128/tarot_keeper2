@@ -1,12 +1,10 @@
 import { useQuery } from "@apollo/client";
 // import React, { useState } from "react";
-import { useState } from 'react';
+import { useState } from "react";
 // import { Card } from "../../../../server/models/tarotCard";
 import { ALL_CARDS } from "../../graphql/queries";
 import SearchCard from "./searchcard";
 import "./newreading.css";
-
-
 
 import {
   MDBContainer,
@@ -31,13 +29,12 @@ const NewReadingForm = () => {
   // const map1 = data.cards.map(x=> x.name)
   // console.log(map1)
 
-  const [cardOption, setCardOption] = useState('');
+  const [cardOption, setCardOption] = useState("");
   const handleChangeEvent = (e) => {
-    setCardOption(e.target.textContent)
-    console.log(cardOption)
-  }
-
- 
+    // console.log(e.target.innerText);
+    setCardOption(e.target.innerText);
+    // console.log(cardOption);
+  };
 
   return (
     <>
@@ -47,26 +44,29 @@ const NewReadingForm = () => {
       <MDBContainer className="text-area">
         <MDBDropdown>
           <MDBDropdownToggle>Pick a Card 🔮</MDBDropdownToggle>
-          <MDBDropdownMenu 
-          id="cardOption"
-          value={cardOption}
-          onChange={handleChangeEvent}
-          label="card Option"
+          <MDBDropdownMenu
+            id="cardOption"
+            value={cardOption}
+            onChange={(e) => {
+              handleChangeEvent(e);
+            }}
+            label="card Option"
           >
-            <MDBDropdownItem >Choose a card!</MDBDropdownItem>
-            {!loading? 
-            data.cards.map((card) => (
-              // data.cards.map
-              <MDBDropdownItem 
-              link childTag='button'
-              key={card._id} 
-              value={card._id}
-              onClick={handleChangeEvent}
-              >
-                {card.name}
-              </MDBDropdownItem>
-            )): ""
-          }
+            <MDBDropdownItem>Choose a card!</MDBDropdownItem>
+            {!loading
+              ? data.cards.map((card) => (
+                  // data.cards.map
+                  <MDBDropdownItem
+                    link
+                    childTag="button"
+                    key={card._id}
+                    value={card._id}
+                    onClick={handleChangeEvent}
+                  >
+                    {card.name}
+                  </MDBDropdownItem>
+                ))
+              : ""}
           </MDBDropdownMenu>
         </MDBDropdown>
 
@@ -77,6 +77,6 @@ const NewReadingForm = () => {
       </MDBContainer>
     </>
   );
-}
+};
 
 export default NewReadingForm;
