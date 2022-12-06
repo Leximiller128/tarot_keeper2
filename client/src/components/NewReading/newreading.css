@@ -16,18 +16,19 @@
 .card-element {
   float: left;
   margin-top: 75px;
-
 }
 
 #typeText {
   margin: 15px;
-
-
 }
 
 .submit-btn {
   margin: 15px;
   background-color: #ffbd01;
+}
+#cardOption{
+  max-height:350px;
+  overflow:auto
 }
 
 .submit-btn:hover {
