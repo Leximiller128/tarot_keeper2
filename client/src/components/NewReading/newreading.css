@@ -34,19 +34,22 @@
   background-color: #88b8a1;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1023px) {
 .div.container{
   min-width: 200px;
 }
- .card-element{
-  
- }
 
- .typeText {
+.text-area{
+  width: auto;
+}
+
+.card-element{
+  float: none;
+}
+
+.typeText {
   margin: 15px;
   min-width: 200px;
 }
-.text-area {
-min-width: 100px;
-}
+
 }
