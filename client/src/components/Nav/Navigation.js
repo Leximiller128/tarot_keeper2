@@ -20,13 +20,6 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   console.log("logged in?", Auth.loggedIn());
   const loggedIn = Auth.loggedIn();
-  //   const token = window.localStorage.getItem("token");
-  //   const user = jwt_decode(token);
-  //   const userId = user.data._id;
-
-  //   const { loading, data } = useQuery(FETCH_USER, {
-  //     variables: { userId: userId }
-  // });
   const [showNavText, setShowNavText] = useState(false);
 
   return (
