@@ -1,15 +1,26 @@
 import "./header.css";
-import { MDBContainer } from "mdb-react-ui-kit";
+// import { MDBContainer } from "mdb-react-ui-kit";
+import logo from "./LogoTarot.jpg";
 
 export default function Header() {
   return (
-    <MDBContainer
-      className="p-5 text-center bg-image"
+    <div
+      //   className="text-center bg-image"
       style={{
-        backgroundImage:
-          "url('https://mdbootstrap.com/img/new/slides/041.webp')",
-        height: "400px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100vw",
+        // backgroundImage: `url(${Logo})`,
+        // height: "200px",
+        // backgroundColor: "#88B8A1",
+        // width: "100vw",
       }}
-    ></MDBContainer>
+    >
+      <img
+        src={logo}
+        style={{ margin: "auto", width: "100vw", objectFit: "contain" }}
+      />
+    </div>
   );
 }
