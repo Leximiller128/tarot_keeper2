@@ -56,11 +56,7 @@ export default function Navbar() {
                 <MDBNavbarLink>Search Library</MDBNavbarLink>
               </MDBNavbarItem>
             </Link>
-            <Link to="/FriendReadings">
-              <MDBNavbarItem>
-                <MDBNavbarLink>Friends' Readings</MDBNavbarLink>
-              </MDBNavbarItem>
-            </Link>
+
             <Link to="/Login">
               <MDBNavbarItem>
                 <MDBNavbarLink>Logout</MDBNavbarLink>
@@ -71,4 +67,37 @@ export default function Navbar() {
       </MDBContainer>
     </MDBNavbar>
   );
+
+  // function LoginNavbar() {
+  //   const [showNavText, setShowNavText] = useState(false);
+
+  //   return (
+  //     <MDBNavbar expand="lg" style={{ backgroundColor: "#88B8A1" }}>
+  //       <MDBContainer fluid>
+  //         <Link to="/">
+  //           <MDBNavbarBrand>Tarot Keeper</MDBNavbarBrand>
+  //         </Link>
+  //         <MDBNavbarToggler
+  //           type="button"
+  //           data-target="#navbarText"
+  //           aria-controls="navbarText"
+  //           aria-expanded="false"
+  //           aria-label="Toggle navigation"
+  //           onClick={() => setShowNavText(!showNavText)}
+  //         >
+  //           <MDBIcon icon="bars" fas />
+  //         </MDBNavbarToggler>
+  //         <MDBCollapse navbar show={showNavText}>
+  //           <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
+  //             <Link to="/Login">
+  //               <MDBNavbarItem>
+  //                 <MDBNavbarLink>Logout</MDBNavbarLink>
+  //               </MDBNavbarItem>
+  //             </Link>
+  //           </MDBNavbarNav>
+  //         </MDBCollapse>
+  //       </MDBContainer>
+  //     </MDBNavbar>
+  // );
+  // }
 }
