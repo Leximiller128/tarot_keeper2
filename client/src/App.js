@@ -9,13 +9,13 @@ import {
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import Footer from "./components/Footer";
-// import Home from "./components/Home";
 import Library from "./components/Library";
 import Navigation from "./components/Nav/Navigation";
 import NewReading from "./components/NewReading";
 import PastReadings from "./components/PastReadings";
 import SignUpForm from "./components/SignUpForm";
-// import TextArea from "./components/TextArea";
+import Header from "./components/Header";
+
 import SearchForm from "./components/SearchForm";
 import Login from "./components/Login";
 import { setContext } from "@apollo/client/link/context";
@@ -49,6 +49,7 @@ function App() {
     <ApolloProvider client={client}>
       <BrowserRouter>
         <div className="outterdiv">
+          <Header></Header>
           <Navigation />
           <div className="bodydiv">
             <Routes>
@@ -56,7 +57,7 @@ function App() {
               <Route path="/Navigation" element={<Navigation />}></Route>
               <Route path="/NewReading" element={<NewReading />}></Route>
               <Route path="/Footer" element={<Footer />}></Route>
-              {/* <Route path="/" element={<NewReading />}></Route> */}
+              <Route path="/Header" element={<Header />}></Route>
               <Route path="/NewReading" element={<NewReading />}></Route>
               <Route path="/SignUpForm" element={<SignUpForm />}></Route>
               <Route path="/Library" element={<Library />}></Route>
