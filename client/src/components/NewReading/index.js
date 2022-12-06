@@ -97,7 +97,7 @@ export default function NewReading() {
         aria-hidden="true"
       >
         <MDBCardImage
-          path={Card.img}
+          src=""
           position="top"
           alt="Sunset Over the Sea"
         />
@@ -106,13 +106,13 @@ export default function NewReading() {
             <span className="placeholder col-6">{Card.name}</span>
           </MDBCardTitle>
           <MDBCardText className="placeholder-glow">
-            <span className="placeholder col-7">{Card.arcana}</span>
-            <span className="placeholder col-4">{Card.suit}</span>
-            <span className="placeholder col-4">{Card.fortune_telling}</span>
-            <span className="placeholder col-6">{Card.keywords}</span>
-            <span className="placeholder col-8">{Card.meaning_up}</span>
-            <span className="placeholder col-8">{Card.meaning_rev}</span>
-            <span className="placeholder col-8">{Card.desc}</span>
+            <span className="placeholder col-7"></span>
+            <span className="placeholder col-4"></span>
+            <span className="placeholder col-4"></span>
+            <span className="placeholder col-6"></span>
+            <span className="placeholder col-8"></span>
+            <span className="placeholder col-8"></span>
+            <span className="placeholder col-8"></span>
           </MDBCardText>
           <MDBBtn id="search-btn">Add Card</MDBBtn>
         </MDBCardBody>
