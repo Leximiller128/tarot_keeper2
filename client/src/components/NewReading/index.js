@@ -26,9 +26,12 @@ import {
 } from "mdb-react-ui-kit";
 
 const NewReadingForm = () => {
-  const { loading, data } = useQuery(ALL_CARDS);
+  const { data } = useQuery(ALL_CARDS);
   const cardList = data?.allCards || [];
+  console.log(data);
   console.log(cardList);
+  // const map1 = data.cards.map(x=> x.name)
+  // console.log(map1)
 
   const [cardOption, setCardOption] = useState('');
   const handleChangeEvent = (e) => {
@@ -80,10 +83,15 @@ const NewReadingForm = () => {
           onChange={handleChangeEvent}
           label="card Option"
           >
-            <MDBDropdownItem>select a card</MDBDropdownItem>
-            {cardList.map((allCards) => (
-              <MDBDropdownItem key={allCards._id} value={allCards._id}>
-                {allCards.name}
+            <MDBDropdownItem >Choose a card!</MDBDropdownItem>
+            {cardList.map((card) => (
+              // data.cards.map
+              <MDBDropdownItem 
+              link childTag='button'
+              key={card._id} 
+              value={card._id}
+              >
+                {card.name}
               </MDBDropdownItem>
             ))}
           </MDBDropdownMenu>
