@@ -97,13 +97,13 @@ export default function NewReading() {
         aria-hidden="true"
       >
         <MDBCardImage
-          src=""
+          src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp"
           position="top"
           alt="Sunset Over the Sea"
         />
         <MDBCardBody>
           <MDBCardTitle className="placeholder-glow">
-            <span className="placeholder col-6">{Card.name}</span>
+            <span className="placeholder col-6"></span>
           </MDBCardTitle>
           <MDBCardText className="placeholder-glow">
             <span className="placeholder col-7"></span>
