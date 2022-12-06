@@ -12,6 +12,9 @@ export const CREATE_USER = gql`
       password: $password
     ) {
       token
+      user{
+        _id
+      }
     }
   }
 `;

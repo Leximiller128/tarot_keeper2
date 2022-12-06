@@ -14,7 +14,7 @@ function Login() {
   // const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
   // const [errorMessage, setErrorMessage] = useState(false);
-  const [login, { error }] = useMutation(LOGIN);
+  const [login, { error, data }] = useMutation(LOGIN);
   const [validated] = useState(false);
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -37,7 +37,7 @@ function Login() {
       const { data } = await login({
         variables: { ...userFormData },
       });
-      Auth.login(data.login);
+      Auth.login(data.login.token);
 
       window.location.assign(`/newReading`);
     } catch (error) {
@@ -45,7 +45,11 @@ function Login() {
       // setErrorMessage(true)
 
       console.error(error);
+
+      //setErrorMessage(true);
+
       // setErrorMessage(true);
+
     }
     alert(`Hello ${userFormData.email}`);
 

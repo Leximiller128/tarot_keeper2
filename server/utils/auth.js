@@ -14,7 +14,7 @@ module.exports = {
     if (req.headers.authorization) {
       token = token.split(' ').pop().trim();
     }
-
+    console.log("Token", token);
     if (!token) {
       return req;
     }
@@ -25,11 +25,10 @@ module.exports = {
       req.user = data;
     } catch {
       console.log('Invalid token');
-      return res.status(400).json({ message: 'invalid token!' });
+      // return res.status(400).json({ message: 'invalid token!' });
     }
 
-    // send to next endpoint
-    next();
+    return req
   },
   signToken: function ({ username, email, _id }) {
     const payload = { username, email, _id };
