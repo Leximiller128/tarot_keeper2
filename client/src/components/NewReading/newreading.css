@@ -15,18 +15,18 @@
 
 .card-element {
   float: left;
-  margin-top: 50px;
-  margin-left: 10%;
+  margin-top: 75px;
+
 }
 
 #typeText {
   margin: 15px;
-  min-width: 400px;
+
+
 }
 
 .submit-btn {
   margin: 15px;
-  left: 40%;
   background-color: #ffbd01;
 }
 
@@ -34,21 +34,19 @@
   background-color: #88b8a1;
 }
 
-@media (max-width: 1325px) {
- .submit-btn{
-
- }
- #typeText{
-  display: flex;
-  order: 2;
-  min-width: 300px;
- }
+@media (max-width: 900px) {
+.div.container{
+  min-width: 200px;
+}
  .card-element{
-  display: flex;
-  order: 2;
+  
  }
- #search-btn{
-  display: flex;
-  order: 2;
- }
+
+ .typeText {
+  margin: 15px;
+  min-width: 200px;
+}
+.text-area {
+min-width: 100px;
+}
 }
