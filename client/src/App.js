@@ -15,9 +15,8 @@ import Navigation from "./components/Nav/Navigation";
 import NewReading from "./components/NewReading";
 import PastReadings from "./components/PastReadings";
 import SignUpForm from "./components/SignUpForm";
-import TextArea from "./components/TextArea";
+// import TextArea from "./components/TextArea";
 import SearchForm from "./components/SearchForm";
-import FriendReadings from "./components/FriendReadings";
 import Login from "./components/Login";
 import { setContext } from "@apollo/client/link/context";
 
@@ -63,12 +62,7 @@ function App() {
               <Route path="/Library" element={<Library />}></Route>
               <Route path="/Login" element={<Login />}></Route>
               <Route path="/PastReadings" element={<PastReadings />}></Route>
-              <Route path="/TextArea" element={<TextArea />}></Route>
               <Route path="/SearchForm" element={<SearchForm />}></Route>
-              <Route
-                path="/FriendReadings"
-                element={<FriendReadings />}
-              ></Route>
             </Routes>
           </div>
           <Footer />
