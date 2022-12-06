@@ -57,8 +57,8 @@ function App() {
               <Route path="/Navigation" element={<Navigation />}></Route>
               <Route path="/NewReading" element={<NewReading />}></Route>
               <Route path="/Footer" element={<Footer />}></Route>
-              <Route path="/Header" element={<Header />}></Route>
-              <Route path="/NewReading" element={<NewReading />}></Route>
+              <Route path="/Header" element={<Header />} />
+              {/* <Route path="/NewReading" element={<NewReading />}></Route> */}
               <Route path="/SignUpForm" element={<SignUpForm />}></Route>
               <Route path="/Library" element={<Library />}></Route>
               <Route path="/Login" element={<Login />}></Route>
