@@ -30,6 +30,13 @@
   max-height:350px;
   overflow:auto
 }
+.cardDesc{
+    padding: 5px;
+    margin-top: 5px;
+    width: 100%;
+    height: 350px;
+    overflow-y: scroll;
+}
 
 .submit-btn:hover {
   background-color: #88b8a1;
