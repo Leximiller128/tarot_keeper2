@@ -44,7 +44,15 @@ const NewReadingForm = () => {
         style={{ maxWidth: "25rem" }}
         aria-hidden="true"
       >
+
         <MDBCardImage src="" position="top" alt="Sunset Over the Sea" />
+
+        <MDBCardImage
+          src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp"
+          position="top"
+          alt="Sunset Over the Sea"
+        />
+
         <MDBCardBody>
           <MDBCardTitle className="placeholder-glow">
             <span className="placeholder col-6"></span>
