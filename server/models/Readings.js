@@ -1,32 +1,32 @@
 const { Schema, model } = require("mongoose");
 
 const readingsSchema = new Schema({
-  username: {
-    type: String,
-    required: true,
-  },
-  readingId: {
+  // _id: {
+  //   type: Schema.Types.ObjectId,
+  //   default: () => new Types.ObjectId(),
+  // },
+  userId: {
     type: Schema.Types.ObjectId,
-    default: () => new Types.ObjectId(),
+    required: true,
+    ref: "User",
   },
-  cards: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Card",
-    },
-  ],
-  title: {
-    type: String,
-    required: true,
+  cardId: {
+    type: Schema.Types.ObjectId,
+    ref: "Card",
   },
-  question: {
-    type: String,
-    required: true,
-},
-  notes: {
-    type: String,
-    required: true,
-},
+
+  //   title: {
+  //     type: String,
+  //     required: true,
+  //   },
+  //   question: {
+  //     type: String,
+  //     required: true,
+  // },
+  //   notes: {
+  //     type: String,
+  //     required: true,
+  // },
   createdAt: {
     type: Date,
     default: Date.now,
