@@ -1,5 +1,6 @@
 //import css
 import "./navigation.css";
+import Auth from "../../utils/auth";
 
 import React, { useState } from "react";
 import {
@@ -17,13 +18,15 @@ import {
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
-//   const token = window.localStorage.getItem("token");
-//   const user = jwt_decode(token);
-//   const userId = user.data._id;
+  console.log("logged in?", Auth.loggedIn());
+  const loggedIn = Auth.loggedIn();
+  //   const token = window.localStorage.getItem("token");
+  //   const user = jwt_decode(token);
+  //   const userId = user.data._id;
 
-//   const { loading, data } = useQuery(FETCH_USER, {
-//     variables: { userId: userId }
-// });
+  //   const { loading, data } = useQuery(FETCH_USER, {
+  //     variables: { userId: userId }
+  // });
   const [showNavText, setShowNavText] = useState(false);
 
   return (
@@ -44,29 +47,38 @@ export default function Navbar() {
         </MDBNavbarToggler>
         <MDBCollapse navbar show={showNavText}>
           <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
-            <Link to="/NewReading">
-              <MDBNavbarItem>
-                <MDBNavbarLink active aria-current="page">
-                  New Reading
-                </MDBNavbarLink>
-              </MDBNavbarItem>
-            </Link>
-            <Link to="/PastReadings">
-              <MDBNavbarItem>
-                <MDBNavbarLink active aria-current="page">
-                  Past Readings
-                </MDBNavbarLink>
-              </MDBNavbarItem>
-            </Link>
-            <Link to="/Library">
-              <MDBNavbarItem>
-                <MDBNavbarLink>Search Library</MDBNavbarLink>
-              </MDBNavbarItem>
-            </Link>
+            {loggedIn && (
+              <>
+                <Link to="/NewReading">
+                  <MDBNavbarItem>
+                    <MDBNavbarLink active aria-current="page">
+                      New Reading
+                    </MDBNavbarLink>
+                  </MDBNavbarItem>
+                </Link>
+                <Link to="/PastReadings">
+                  <MDBNavbarItem>
+                    <MDBNavbarLink active aria-current="page">
+                      Past Readings
+                    </MDBNavbarLink>
+                  </MDBNavbarItem>
+                </Link>
+                <Link to="/Library">
+                  <MDBNavbarItem>
+                    <MDBNavbarLink>Search Library</MDBNavbarLink>
+                  </MDBNavbarItem>
+                </Link>
+              </>
+            )}
 
-            <Link to="/Login">
+            <Link
+              to="/Login"
+              onClick={() => {
+                Auth.logout();
+              }}
+            >
               <MDBNavbarItem>
-                <MDBNavbarLink>Logout</MDBNavbarLink>
+                <MDBNavbarLink>{loggedIn ? "Logout" : "Login"}</MDBNavbarLink>
               </MDBNavbarItem>
             </Link>
           </MDBNavbarNav>
