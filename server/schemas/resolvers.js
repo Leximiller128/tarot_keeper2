@@ -14,11 +14,14 @@ const resolvers = {
       throw new AuthenticationError("You need to be logged in!");
     },
     //to populate other users readings (feed)
+    allUsers: async () => {
+      return User.find({});
+    },
     readings: async () => {
-      return User.find().populate("readings");
+      return Reading.find({});
     },
     cards: async () => {
-      return Card.find();
+      return Card.find({});
     },
     singleCard: async (parent, { name }) => {
       const params = name ? { name } : {};
@@ -56,6 +59,20 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+    },
+
+    saveReading: async (_, { userId, reading }, context) => {
+      console.log(reading);
+      if (context.user) {
+        const newReading = await Reading.create(reading);
+        console.log(newReading);
+        return await User.findByIdAndUpdate(
+          { _id: userId },
+          { $push: { readings: newReading } },
+          { new: true }
+        );
+      }
+      throw new AuthenticationError("Must be logged in to save a reading");
     },
     //works in theory! which is great.
     saveCard: async (parent, { newCard }, context) => {

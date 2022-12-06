@@ -1,6 +1,6 @@
 //import library.css
 import "./library.css";
-
+import { useQuery } from "@apollo/client";
 import React from "react";
 import {
   MDBContainer,
@@ -15,8 +15,11 @@ import {
 } from "mdb-react-ui-kit";
 import Auth from "../../utils/auth";
 import { Navigate } from "react-router-dom";
+import { GET_ME } from "../../graphql/queries";
 
 export default function Library() {
+  const { loading, data } = useQuery(GET_ME);
+  console.log("getme result", data);
   return (
     <>
       {Auth.loggedIn() ? (
