@@ -15,6 +15,18 @@ const readingsSchema = new Schema({
       ref: "Card",
     },
   ],
+  title: {
+    type: String,
+    required: true,
+  },
+  question: {
+    type: String,
+    required: true,
+},
+  notes: {
+    type: String,
+    required: true,
+},
   createdAt: {
     type: Date,
     default: Date.now,

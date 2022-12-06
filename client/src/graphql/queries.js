@@ -20,3 +20,26 @@ export const GET_ME = gql`
     }
   }
 `;
+
+export const SEARCH_CARD = gql`
+  query searchCard($card: String!) {
+  singleCard(card: $card) {
+    name
+    img
+    suit
+  }
+}
+`;
+
+export const ALL_CARDS = gql `
+query allCards {
+  cards {
+    name
+    img
+    arcana
+    suit
+    desc
+    _id
+  }
+}
+`;
