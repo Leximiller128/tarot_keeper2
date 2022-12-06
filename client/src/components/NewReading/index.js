@@ -5,6 +5,8 @@ import { useState } from "react";
 import { ALL_CARDS } from "../../graphql/queries";
 import SearchCard from "./searchcard";
 import "./newreading.css";
+import { Navigate } from "react-router-dom";
+import Auth from "../../utils/auth";
 
 import {
   MDBContainer,
@@ -34,44 +36,54 @@ const NewReadingForm = () => {
 
   return (
     <>
-      {/* Text area and search bar */}
-      <MDBContainer className="text-area">
-        <MDBDropdown>
-          <MDBDropdownToggle>Pick a Card 🔮</MDBDropdownToggle>
-          <MDBDropdownMenu
-            id="cardOption"
-            value={cardOption}
-            onChange={(e) => {
-              handleChangeEvent(e);
-            }}
-            label="card Option"
-          >
-            <MDBDropdownItem>Choose a card!</MDBDropdownItem>
-            {!loading
-              ? data.cards.map((card) => (
-                  <MDBDropdownItem
-                    link
-                    childTag="button"
-                    key={card._id}
-                    value={card._id}
-                    onClick={(e) => {
-                      setCardOption(card);
-                    }}
-                  >
-                    {card.name}
-                  </MDBDropdownItem>
-                ))
-              : ""}
-          </MDBDropdownMenu>
-        </MDBDropdown>
+      {Auth.loggedIn() ? (
+        <>
+          {/* Text area and search bar */}
+          <MDBContainer className="text-area">
+            <MDBDropdown>
+              <MDBDropdownToggle>Pick a Card 🔮</MDBDropdownToggle>
+              <MDBDropdownMenu
+                id="cardOption"
+                value={cardOption}
+                onChange={(e) => {
+                  handleChangeEvent(e);
+                }}
+                label="card Option"
+              >
+                <MDBDropdownItem>Choose a card!</MDBDropdownItem>
+                {!loading
+                  ? data.cards.map((card) => (
+                      <MDBDropdownItem
+                        link
+                        childTag="button"
+                        key={card._id}
+                        value={card._id}
+                        onClick={(e) => {
+                          setCardOption(card);
+                        }}
+                      >
+                        {card.name}
+                      </MDBDropdownItem>
+                    ))
+                  : ""}
+              </MDBDropdownMenu>
+            </MDBDropdown>
 
-        <MDBInput label="Title for New Reading" id="typeText" type="text" />
-        <MDBInput label="Initial Question Asked" id="typeText" type="text" />
-        <MDBTextArea label="Notes" id="typeText" rows={4} />
-        <MDBBtn className="submit-btn">Submit</MDBBtn>
-      </MDBContainer>
-      {/* Tarot card placement */}
-      <SearchCard card={cardOption} />
+            <MDBInput label="Title for New Reading" id="typeText" type="text" />
+            <MDBInput
+              label="Initial Question Asked"
+              id="typeText"
+              type="text"
+            />
+            <MDBTextArea label="Notes" id="typeText" rows={4} />
+            <MDBBtn className="submit-btn">Submit</MDBBtn>
+          </MDBContainer>
+          {/* Tarot card placement */}
+          <SearchCard card={cardOption} />
+        </>
+      ) : (
+        <Navigate to="/" replace />
+      )}
     </>
   );
 };
