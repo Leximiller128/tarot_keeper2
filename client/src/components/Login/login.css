@@ -20,3 +20,7 @@
 .btn2:hover {
     background-color: #88B8A1;
   }
+
+  .form-input{
+    margin: 10px
+  }

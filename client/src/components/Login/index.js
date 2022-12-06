@@ -41,12 +41,14 @@ function Login() {
 
       window.location.assign(`/newReading`);
     } catch (error) {
-
       console.log(error);
       // setErrorMessage(true)
 
       console.error(error);
+
       //setErrorMessage(true);
+
+      // setErrorMessage(true);
 
     }
     alert(`Hello ${userFormData.email}`);

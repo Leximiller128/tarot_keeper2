@@ -17,4 +17,9 @@
 
   .card-element {
     margin: 20px;
+    bottom: 50px;
+  }
+
+  .d-flex-w-auto-mb-3 {
+   justify-items: center;
   }
