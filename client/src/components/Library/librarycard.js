@@ -1,5 +1,4 @@
 import { useQuery } from "@apollo/client";
-import "./newreading.css";
 import { SEARCH_CARD } from "../../graphql/queries";
 import {
   MDBContainer,
@@ -14,7 +13,7 @@ import {
   MDBCardImage,
 } from "mdb-react-ui-kit";
 
-const searchSingleCard = ({ card }) => {
+const libraryCard = ({ card }) => {
   return (
     <>
       {card && (
@@ -34,7 +33,6 @@ const searchSingleCard = ({ card }) => {
               <span className=" col-6">{card.name}</span>
             </MDBCardTitle>
             <MDBCardText class="cardDesc">Description: {card.desc}</MDBCardText>
-            <MDBBtn id="search-btn">Add Card</MDBBtn>
           </MDBCardBody>
         </MDBCard>
       )}
@@ -42,4 +40,4 @@ const searchSingleCard = ({ card }) => {
   );
 };
 
-export default searchSingleCard;
+export default libraryCard;

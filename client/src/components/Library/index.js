@@ -1,6 +1,11 @@
 //import library.css
-import "./library.css";
+// import "./library.css";
+import "../NewReading/newreading.css";
 import { useQuery } from "@apollo/client";
+import { ALL_CARDS } from "../../graphql/queries";
+import { useState } from "react";
+import LibraryCard from "./librarycard";
+
 import React from "react";
 import {
   MDBContainer,
@@ -12,57 +17,64 @@ import {
   MDBCardBody,
   MDBCardImage,
   MDBCard,
+  MDBDropdown,
+  MDBDropdownToggle,
+  MDBDropdownMenu,
+  MDBDropdownItem,
 } from "mdb-react-ui-kit";
 import Auth from "../../utils/auth";
 import { Navigate } from "react-router-dom";
-import { GET_ME } from "../../graphql/queries";
 
-export default function Library() {
-  const { loading, data } = useQuery(GET_ME);
-  console.log("getme result", data);
+const Library = () => {
+  const { loading, data } = useQuery(ALL_CARDS);
+
+  const [cardOption, setCardOption] = useState(null);
+  const handleChangeEvent = (e) => {
+    console.log("handle change");
+    // setCardOption(e.target.innerText);
+  };
   return (
     <>
       {Auth.loggedIn() ? (
-        <div>
+        <>
           <MDBContainer fluid>
-            <MDBInputGroup tag="form" className="d-flex-w-auto-mb-3">
-              <input
-                className="form-control"
-                placeholder="Type query"
-                aria-label="Search"
-                type="Search"
-              />
-              <MDBBtn className="searchBtn">Search</MDBBtn>
-            </MDBInputGroup>
+            <MDBDropdown>
+              <MDBDropdownToggle>Pick a Card 🔮</MDBDropdownToggle>
+              <MDBDropdownMenu
+                id="cardOption"
+                value={cardOption}
+                onChange={(e) => {
+                  handleChangeEvent(e);
+                }}
+                label="card Option"
+              >
+                <MDBDropdownItem>Choose a card!</MDBDropdownItem>
+                {!loading
+                  ? data.cards.map((card) => (
+                      <MDBDropdownItem
+                        link
+                        childTag="button"
+                        key={card._id}
+                        value={card._id}
+                        onClick={(e) => {
+                          setCardOption(card);
+                        }}
+                      >
+                        {card.name}
+                      </MDBDropdownItem>
+                    ))
+                  : ""}
+              </MDBDropdownMenu>
+            </MDBDropdown>
           </MDBContainer>
 
-          <MDBCard
-            className="card-element"
-            style={{ maxWidth: "30rem" }}
-            aria-hidden="true"
-          >
-            <MDBCardImage
-              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/182.webp"
-              position="top"
-              alt="Sunset Over the Sea"
-            />
-            <MDBCardBody>
-              <MDBCardTitle className="placeholder-glow">
-                <span className="placeholder col-6"></span>
-              </MDBCardTitle>
-              <MDBCardText className="placeholder-glow">
-                <span className="placeholder col-7"></span>
-                <span className="placeholder col-4"></span>
-                <span className="placeholder col-4"></span>
-                <span className="placeholder col-6"></span>
-                <span className="placeholder col-8"></span>
-              </MDBCardText>
-            </MDBCardBody>
-          </MDBCard>
-        </div>
+          <LibraryCard card={cardOption} />
+        </>
       ) : (
         <Navigate to="/" replace />
       )}
     </>
   );
-}
+};
+
+export default Library;
