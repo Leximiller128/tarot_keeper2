@@ -1,7 +1,7 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const GET_ME = gql`
-   {
+  {
     me {
       _id
       username
@@ -23,23 +23,23 @@ export const GET_ME = gql`
 
 export const SEARCH_CARD = gql`
   query searchCard($card: String!) {
-  singleCard(card: $card) {
-    name
-    img
-    suit
+    singleCard(card: $card) {
+      name
+      img
+      suit
+    }
   }
-}
 `;
 
-export const ALL_CARDS = gql `
-query allCards {
-  cards {
-    name
-    img
-    arcana
-    suit
-    desc
-    _id
+export const ALL_CARDS = gql`
+  query allCards {
+    cards {
+      name
+      img
+      arcana
+      suit
+      desc
+      _id
+    }
   }
-}
 `;
