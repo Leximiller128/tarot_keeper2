@@ -53,7 +53,7 @@ function Footer() {
             floating
             size="lg"
             className="text-dark m-1"
-            href="https://www.instagram.com/explore/tags/tarotcards/?hl=en"
+            href="https://www.instagram.com/tarot_keeper"
             role="button"
           >
             <MDBIcon fab className="fa-instagram" />
