@@ -1,36 +1,33 @@
 .mb-3 {
-  padding: 10px;
-  justify-content: center;
-  margin: 30px;
-  width: flex;
+    padding: 10px;
+    justify-content: center;
+    margin: 30px;
+    width: flex;
 }
 
 #signupBtn {
-  background-color: #ffbd01;
-  border-color: #ffbd01;
-  max-width: 250px;
-  margin-left: 25%;
+    background-color: #FFBD01;
+    border-color: #FFBD01;
+    max-width: 250px;
+    margin-left: 38%;
 }
 
 .btn {
-  background-color: #ffbd01;
-  border-color: #ffbd01;
-  max-width: 250px;
+    background-color: #FFBD01;
+    border-color: #FFBD01;
+    max-width: 250px;
+
 }
 
 .btn2:hover {
-  background-color: #88b8a1;
-}
+    background-color: #88B8A1;
+  }
 
-.form-input {
-  margin: 10px;
-}
+  .form-input{
+    margin: 10px
+  }
 
-form {
-  text-align: center;
-  margin-top: 50px;
-  margin-left: 31%;
-}
-#signupBtn2 {
-  margin-bottom: 6px;
-}
+  form {
+    text-align: center;
+    margin-top: 50px;
+  }
