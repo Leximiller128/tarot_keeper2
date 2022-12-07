@@ -1,8 +1,8 @@
-<h1 align="center"> <a href="#">
+<h1 align="center"> <a href="https://my-tarot-keeper.herokuapp.com/">
 My Tarot Keeper 🔮</a>
 </h1>
 
-<p align="center"> For a Detailed Video Walkthrough you can follow the link in the Title of this one -> <a href= "#">Video Walkthrough</a></p>
+![imgheader](./Assets/LogoTarot.jpg)
 
 ## Table of Contents
 
@@ -82,7 +82,15 @@ npm run develop
 ```
 ## [Database Models](#table-of-contents)
 
+Below is a Short Video with our project connected to MongoDB
+
+![gif example](./Assets/mongoDB.gif)
+
 ## [Usage](#table-of-contents)
+
+This is a basic Video of how our application works! considering future developments, we will continue updating as we keep working on this application
+
+![gif example](./Assets/usageTarot.gif)
 
 ## [Collaborators](#table-of-contents)
 Collaborators who worked on this application were students of DU University Bootcamp
@@ -98,5 +106,20 @@ Collaborators who worked on this application were students of DU University Boot
 </center>
 
 ## [Resources](#table-of-contents)
+a big shout out to 
 
-## [Questions](#table-of-contents)
+* Dan
+* George
+* Kirtley
+* Jude
+
+for contribution and mentoring in making this website as well 
+
+## [Questions/Connections](#table-of-contents)
+
+Follow us on this application journey!
+[Tarot Keeper Instagram!](http://instagram.com/tarot_keeper)
+
+Twitter has some amazing Tarot info
+[tarot twitter](https://twitter.com/search?q=%23tarot)
+
