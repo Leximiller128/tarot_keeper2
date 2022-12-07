@@ -4,6 +4,7 @@ import { LOGIN } from "../../graphql/mutations/login";
 import Auth from "../../utils/auth";
 import signupForm from "../SignUpForm";
 import { Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 // import newReading from "../NewReading";
 
 // import { checkPassword, validateEmail } from "../../utils/helpers";
@@ -91,7 +92,7 @@ function Login() {
       </button>
 
       <Link
-        to="/signupForm"
+        to="/SignUpForm"
         className="btn btn-block btn-primary"
         id="signupBtn"
         style={{ cursor: "pointer" }}
