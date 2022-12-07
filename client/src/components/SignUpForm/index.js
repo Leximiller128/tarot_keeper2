@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 import { useMutation } from "@apollo/client";
 
-function SignupForm() {
+function SignUpForm() {
   const [formState, setFormState] = useState({
     username: '',
     email: '',
@@ -110,4 +110,4 @@ function SignupForm() {
   );
 }
 
-export default SignupForm;
+export default SignUpForm;
