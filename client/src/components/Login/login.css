@@ -1,8 +1,8 @@
 .mb-3 {
-  padding: 10px;
-  justify-content: center;
-  margin: 30px;
-  width: flex;
+    padding: 10px;
+    justify-content: center;
+    margin: 30px;
+    width: flex;
 }
 
 #signupBtn {
@@ -20,18 +20,14 @@
 }
 
 .btn2:hover {
-  background-color: #88b8a1;
-}
+    background-color: #88B8A1;
+  }
 
-.form-input {
-  margin: 10px;
-}
+  .form-input{
+    margin: 10px
+  }
 
-form {
-  text-align: center;
-  margin-top: 50px;
-  margin-left: 31%;
-}
-#signupBtn2 {
-  margin-bottom: 6px;
-}
+  form {
+    text-align: center;
+    margin-top: 50px;
+  }
