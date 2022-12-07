@@ -6,17 +6,17 @@
 }
 
 #signupBtn {
-    background-color: #FFBD01;
-    border-color: #FFBD01;
-    max-width: 250px;
-    margin-left: 38%;
+  background-color: #ffbd01;
+  border-color: #ffbd01;
+  max-width: 250px;
+  margin-left: 38%;
 }
 
 .btn {
-    background-color: #FFBD01;
-    border-color: #FFBD01;
-    max-width: 250px;
-
+  background-color: #ffbd01;
+  border-color: #ffbd01;
+  max-width: 250px;
+  margin-left: 25%;
 }
 
 .btn2:hover {
