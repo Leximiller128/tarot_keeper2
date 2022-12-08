@@ -2,7 +2,7 @@ import "./login.css";
 import React, { useState } from "react";
 import { LOGIN } from "../../graphql/mutations/login";
 import Auth from "../../utils/auth";
-import signupForm from "../SignUpForm";
+import SignUpForm from "../SignUpForm";
 import { Link } from "react-router-dom";
 // import newReading from "../NewReading";
 
@@ -96,9 +96,9 @@ function Login() {
         id="signupBtn"
         style={{ cursor: "pointer" }}
         type="submit"
-        onClick={signupForm}
+        onClick={SignUpForm}
       >
-        Not a user? Signup here!
+        Not a user? Sign Up here!
       </Link>
     </form>
   );

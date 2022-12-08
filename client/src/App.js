@@ -15,7 +15,6 @@ import NewReading from "./components/NewReading";
 import PastReadings from "./components/PastReadings";
 import SignUpForm from "./components/SignUpForm";
 import Header from "./components/Header";
-
 import SearchForm from "./components/SearchForm";
 import Login from "./components/Login";
 import { setContext } from "@apollo/client/link/context";
