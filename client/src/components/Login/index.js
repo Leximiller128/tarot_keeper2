@@ -16,7 +16,7 @@ function Login() {
   // const [password, setPassword] = useState("");
   // const [errorMessage, setErrorMessage] = useState(false);
   const [login, { error, data }] = useMutation(LOGIN);
-  //const [validated] = useState(false);
+  // const [validated] = useState(false);
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
@@ -60,10 +60,7 @@ function Login() {
   };
 
   return (
-    <form
-      onSubmit={handleFormSubmit}
-      // validated={validated}
-    >
+    <form onSubmit={handleFormSubmit}>
       <input
         className="form-input"
         placeholder="Your email"
