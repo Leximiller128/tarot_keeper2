@@ -10,13 +10,13 @@ import { useMutation } from "@apollo/client";
 
 function SignUpForm() {
   const [formState, setFormState] = useState({
-    username: '',
-    email: '',
-    password: '',
+    username: "",
+    email: "",
+    password: "",
   });
 
   // const [errorMessage, setErrorMessage] = useState("");
-  const [addUser, {error, data}] = useMutation(CREATE_USER);
+  const [addUser, { error, data }] = useMutation(CREATE_USER);
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
@@ -27,19 +27,18 @@ function SignUpForm() {
   };
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    console.log("we are here after event.prevent")
+    console.log("we are here after event.prevent");
 
     try {
       const { data } = await addUser({
         variables: { ...formState },
       });
-      console.log("try")
+      console.log("try");
       Auth.login(data.addUser.token);
-      
+
       alert(`Hello ${formState.username}`);
-     
     } catch (error) {
-      console.log("catch")
+      console.log("catch");
       console.log(error);
     }
   };
